@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
+  <link rel="dns-prefetch" href="//caibing.xyz">
   <title>再议减少HTTP请求 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。">
 <meta name="keywords" content="html5,前端,性能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="再议减少HTTP请求">
-<meta property="og:url" content="//litten.me/2014/08/14/reduce-http-requests/index.html">
+<meta property="og:url" content="//caibing.xyz/2014/08/14/reduce-http-requests/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//litten.me/assets/blogImg/reduce-http.jpg">
+<meta property="og:image" content="//caibing.xyz/assets/blogImg/reduce-http.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再议减少HTTP请求">
 <meta name="twitter:description" content="最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。">
-<meta name="twitter:image" content="//litten.me/assets/blogImg/reduce-http.jpg">
+<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/reduce-http.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aSY7CUAxF0ex/09QCQsJ9doEU+2aEaJJ/GFjujgNfr9N19f7Vd853I5/+8yVDhozHMvhR+HX+1dU79zDyFBkyZOxhXEUw8p1aIL6/Gz+bDBkyZNwncJ2A2//7ZMiQIeM+XUO3DoPpTwOuDBkyHshIW2a8+OSftlJMGTJkjGbwrvvvX39lviFDhoxHMWrt/n547ZzhzalkyJAxmsEDXGedohPEeUksQ4aMDQxSOvImWrpO0bmbDBkyZjN40ORpYjoYSJfM3jxXhgwZoxn9lQgyhkx/VRwAyJAhYyiD/yBN4Ph4MmWgrqEMGTIGMch6Fj9uZ6kiLWIPsikmQ4aMEYxaUZo29Pl3yB0ua3EZMmSMZqQtNl64dsYGpPUmQ4aMnQySMvJOV22QGT9LhgwZoxn9JS0SEEmjLa1GZciQsY2RtrfSI9YOGgdlGTJkDGW8Shdvh3F2bSQgQ4aMPYx0uFhbjKgNR1EZLEOGjNGM720spENKPnJA7TYZMmSMY/CRZLoclrbPOiWuDBkyNjDSdLDWgOPhOC6eZciQsYBRW7+ojRaC5Qn8Z8mQIWMqozYS6FfMtbQS1d8yZMgYx+BXSkr/stqCWgyTIUPGYxlpkE0Hn/3lDJSAypAhYwGjP55Mi8+0iP1wKhkyZMholKP9BDHYFpEhQ4aMRtrXaZ+hdp4MGTIWMEgRm7bbePKXJosyZMjYxqiVjnHqho/CC2YZMmQsYPwBlxvRP5UFaO0AAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aQW7DMAxE0dz/0i7QVYHC0gzHLirya2Ukjq2nBUOR+nzkcX2P5PPrx7i7f33PAwMGDBjHMq7l+D2tu2t3Wvq71nODAQPGHMY6aLoB153oXVA23gsDBgwYywklARoGDBgw3gu4tW3tXWKnLAcMGDBgKJtYaTNpFu+UgPvwXhwGDBgHMvIXv3f9Yn8DBgwYhzCueLjNy1pA3zwBBgwYrRnKMYh1fNMLZ7UynBGIYcCA0ZSRBL68lK8X3TYJKwwYMAYw3LCrHyBzJ6e3Hz5upIcBA8axDAWgJHluSqe3M/VPYMCA0ZXhBjg3Naxh7BYmDBgwWjPcapUeWGvpYC3dhAEDRm+GAjDWQ9juut9KoR8GDBitGco21S39/+USGLttGDBgHMuoNSNrk06Od2zeCwMGjNYMpUCmB77awTK9Ibp5FwwYMMYw8qKYe0RMWRojw4UBA0Y7hl7cf6qIrzcM9GWFAQPGHIbeaHSnqB+eqD0BBgwYvRn6VlMvwD2VJtZSRhgwYHRluAmffp0EU73kBwMGjJkM5RFuqyD/7eZfAgYMGK0Z+jEI/dHJMTKj0AYDBowBjKT4lTQ+3UC/2dbCgAGjNaPWMkyOgiXBOkoWYcCAcTjDLYolyaVyZ60wBwMGjAmMWhkuKaW5UX+z6YUBAwYM4ZhFUj5Twq7R34ABA8ZgRl4gq22VpafBgAFjAENvBrjJ3zqYugklDBgwZjLyxkCtbZAsyiv9DRgwYPxHxheP6iLgjH4QogAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 

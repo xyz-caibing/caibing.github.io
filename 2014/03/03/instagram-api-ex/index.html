@@ -5,24 +5,24 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
+  <link rel="dns-prefetch" href="//caibing.xyz">
   <title>instagram图片拉取小经验 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近喜欢上了instagram，分享一下获取照片的经验。">
 <meta name="keywords" content="web,经验,产品">
 <meta property="og:type" content="article">
 <meta property="og:title" content="instagram图片拉取小经验">
-<meta property="og:url" content="//litten.me/2014/03/03/instagram-api-ex/index.html">
+<meta property="og:url" content="//caibing.xyz/2014/03/03/instagram-api-ex/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="最近喜欢上了instagram，分享一下获取照片的经验。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//litten.me/assets/blogImg/instagram1.jpg">
-<meta property="og:image" content="//litten.me/assets/blogImg/instagram2.jpg">
+<meta property="og:image" content="//caibing.xyz/assets/blogImg/instagram1.jpg">
+<meta property="og:image" content="//caibing.xyz/assets/blogImg/instagram2.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="instagram图片拉取小经验">
 <meta name="twitter:description" content="最近喜欢上了instagram，分享一下获取照片的经验。">
-<meta name="twitter:image" content="//litten.me/assets/blogImg/instagram1.jpg">
+<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/instagram1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -283,7 +283,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNklEQVR42u3ay5KjMAwF0P7/n85UzapnAbmSSPcgjlcpEowPC8d6fH3F4/V3fP/8/Ur13qNvj65cNjAwMG7LeJ2O86UfPfJ86fnvk7VhYGA8h1HdZI+u5MtN5knWhoGBgZEfDc83xN63GBgYGBNGcoyrzvYLGy4GBsatGEkQm2e6qkm6H43FMTAwbsiYJPc//fnj9Q0MDIz/nvEqjmoQW13QqzUwMDB2M3qprmrx4LwMMOmpKJ9PMTAwbsioFinzLTJ/i5PD4j//GxgYGEsZ1RvyMkDeSFE9Yh6uFgMDYynjqoR+nsrPQ9xCuQIDA+MBjGp4mTdV5IfOPJB+0y2CgYGxjlFtpJgc76oJu3LaDgMDYzWjUEOImzCq4Pn8GBgYWxn5g3spuV6htNkzgoGBsZTRLBYOttf83uovMTAwtjLyzbGQpi8WI5PwuNAzgoGBsZqRd2f0ws5qc0a52QIDA2M1o9dmkT84LzOMYnEMDIzVjPwBeZDZ216r80fRMwYGxs0Z+VKuaqHIy5nJ63jTM4KBgbGC0dtke0HvBRWM83QbBgbGYxjz0DTflPPWjTeHSAwMjNWMebNpb9H5lloOjzEwMNYxek0VvcRZ9UqhaIGBgbGakY88Qd9Lon0ixMXAwNjEyKe+NjGXbKbJa8LAwHgOo9pUMTnGzUNZDAwMjEkZ8toEXCEkxsDAwAiKnb0lTpJ6GBgYT2PkQWzUqjUoYTabPzAwMFYzRqFjKyj9mUMnBgbGCsYfsHOtYx1kmUkAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aS27DMAxF0ex/0+k0QGv7PtJOIep6FKSpotMBy9/rhZ/3Tc/naUevP9+5+ZEhQ8ayDP7F/DO/z08/w79XhgwZ+zCOItj566PL8eBLzjm/mwwZMmSQq/MQzDEyZMiQ0WeQE/jV/y3gypAhYykGb5CdfzG5Og/Ej9TiMmTIWJDBu+7ff/3IfEOGDBlLMToDyHRImaaPwa1kyJAxmsEDHBk98rK2dubF78qQIWMoI12DIE2xNATzQUKQt8qQIWMQg1yXXIKPFtKhJhmjypAhYwdGCug3znigfzDUypAhY1kGHz2mYZenfbXTZMiQMZXRWYNIk0ieVrZqcRkyZGzAqLW90vEkL4wRWIYMGRswai2wWristf4v/jHIkCFjNKMWOjurEqQZR65eTBZlyJCxIIMnbc915m9YFJMhQ8Zoxl0lK1+J6A87L5YtZMiQMY5Ra9OnQTNem0j/lDJkyNiGwaeBtYWMu4rhP96XIUPGaEZnzaK2kNEZG6DSWoYMGUMZ5EO8JZe28DqpZJwgypAhY3EG6syV2mdpIC4OJ2TIkLEBIwXUEsq0eOYNOBkyZExlvMOHt95IanhXcilDhozZjP5AsT9a4KlqcV1MhgwZIxg8gKYNOE4iP5UhQ4aMWhuuVrLGKxS8lJUhQ4aMcNmCF8ApTIYMGTI6dXA6jCQwNHiQIUPGBoy00Z+Wo/3i9iJBlCFDxmgGLx1JEOTn1Mra1iBThgwZ6zF+ADD9Qc+W4ySyAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 

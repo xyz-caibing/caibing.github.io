@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
+  <link rel="dns-prefetch" href="//caibing.xyz">
   <title>生产者-消费者模型的coffeescript实现 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这两天一直在看coffeescript相关的东西，也帮一个朋友搞了个生产者-消费者模型的C语言实现。想到还没用coffeescript真正意义上写过程序，那就尝试做一下吧。 其实《CoffeeScript小书》是暑假实习时就买了，一直比较向往着函数式编程却拖延了很久没行动起来。小书只有几十页，本是github上一个开源的项目，我喜欢这种轻巧的文字。语法部分看下来，再看下类与继承，只花了半天的时间，">
 <meta name="keywords" content="js,coffeescript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="生产者-消费者模型的coffeescript实现">
-<meta property="og:url" content="//litten.me/2012/12/24/coffee-pc/index.html">
+<meta property="og:url" content="//caibing.xyz/2012/12/24/coffee-pc/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="这两天一直在看coffeescript相关的东西，也帮一个朋友搞了个生产者-消费者模型的C语言实现。想到还没用coffeescript真正意义上写过程序，那就尝试做一下吧。 其实《CoffeeScript小书》是暑假实习时就买了，一直比较向往着函数式编程却拖延了很久没行动起来。小书只有几十页，本是github上一个开源的项目，我喜欢这种轻巧的文字。语法部分看下来，再看下类与继承，只花了半天的时间，">
 <meta property="og:locale" content="default">
@@ -274,7 +274,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuUlEQVR42u3aQW6FMAwFwH//S1Opq1YV8ByTkEqTFWIBk43lPOfzidfxvZI3P9ff92dvHl64uLht7nG5znA5/fovuQEXF3c99xpRLUZnW02eb2y4uLibccdan+suBRcX979zr5uSzoEKFxd3T27ncJJHIdWjES4u7lvcTtF56nlivouLi1vkHsVV/U519HLzd1xc3CXcarSRHH7GApTC8AYXF3cyNx+O9i9h5KFquYTh4uJO444VmrENVzf5qyPDxcWdzK2mEJ3UIvlyfr0DFxd3Dbcaf4wVoLESdjP/wcXFncDtRKWDNTIIWaIShouLO5nbCTWqQWr1j7i4uCu5yQAjaV/y7XUaKVxc3Le41YpRbVmS4BUXF3cH7lOtSb7tnI6Li7ueO3bgySOMajmLAhdcXNzJ3LwY9aPS6pZwcXHf5eZB6tiYZOwLuLi473LzNW80W5j54OLiTuZ2CtOzw9okfsXFxV3JrcYWT13YSg48UYqDi4s7jVu9NjE2hukURFxc3D25+QA1/1o+oMXFxd2Zm5Sk1gUsXFzcbbj5sLPz437hw8XFXcPtB6Z5m5IMX/NrW7i4uBO4X7HmBhzar6L7AAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABy0lEQVR42u3aS27DMAwFwNz/0i7QrVvlUZQUBxitgkCwJ1kQ/L1e8bl+z/2b+8nv3O8vO7i4uG3uNTz3O/eXjW+O35gbcHFxz3PHwevNI4bBrhPUcHFxn8/NE6BxoMyfj4uL+y3cPh0XF/dbuJ0UZJzcdBIgXFzcT3GrDdMdnzf2d3FxcYvcq3j64e9qHFxc3DPcvG3RiTPVAunNSAYXF/cId65oyUuUjdsiuLi4m7mr2hZJA6WTWuHi4p7k5ksS+drW3Pi20CrFxcXdxq0WLdVFrvxmlAzh4uIe4a4tclYVP5MNEVxc3EXcvIDJ05QOdzKE4eLiLuJWGxNJ62RcDo0TptYGGS4u7iLuXEhKHp20U/O/5o9whouLu5mbJyJV3FwUmhyi4OLiLuLOJRmdBmt1pPpv8YOLi3uEuyp45T+jPGTFxcU9wu0PUPNGSd6KLS9h4OLiLuVexTNXV3XWvHBxcc9z85MvZ6wKedXAh4uLu5ZbfXEyRk2Sm0JDBBcX90PcvHmRj0wmo2bSy8HFxX0MtxrsqosaUTjDxcV9JDcfuHYWswp1GC4u7jbuXIMjH8HmyxyLazVcXNwpbrVhOhe21g5rcXFxt3F/AIf4UsGg6UVyAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 

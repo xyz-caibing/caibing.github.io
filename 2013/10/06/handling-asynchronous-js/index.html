@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
+  <link rel="dns-prefetch" href="//caibing.xyz">
   <title>统一处理异步的js回调 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="js编程时经常会用到异步处理，而异步会带了所谓的并发问题。比如，你需要向服务器发出多个ajax请求，然后在返回所有结果后做进一步处理，同时要显示动画。因此我们需要用到以下的方案。">
 <meta name="keywords" content="js,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="统一处理异步的js回调">
-<meta property="og:url" content="//litten.me/2013/10/06/handling-asynchronous-js/index.html">
+<meta property="og:url" content="//caibing.xyz/2013/10/06/handling-asynchronous-js/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="js编程时经常会用到异步处理，而异步会带了所谓的并发问题。比如，你需要向服务器发出多个ajax请求，然后在返回所有结果后做进一步处理，同时要显示动画。因此我们需要用到以下的方案。">
 <meta property="og:locale" content="default">
@@ -264,7 +264,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHUlEQVR42u3ay47DIAwF0P7/T2e2lTqh1zipFDisqj7AJwsXjF+veBxv4/P9z+98fvNstvGcFw8MDIzHMo7hGC+c/OrsQeSvx6tgYGDswzjLYHlAZ6lzDBin9SQ2DAwMjCpjLnEn62JgYGB0GNXDZ4LEwMDAmDvE5oW2aog/PYtjYGA8kJGnyN+/vuV+AwMD41GMozg6YeVBl6PCwMBYmpEnuGp7RN6cMZdwMTAwMMahJJeO1UNvZzYMDIwdGElBLX+nCr6q5IeBgbE2I2nq6ifcvFFj8s8AAwNjacY45VVJ1Y3gZZtCDAyMRRn5z5K0eFXyra6OgYGxNqNTCMtzeeffoLAuBgbG0oy8Iay65FzhrJqIMTAw9mRUmyfm2iaqn0YbRAwMjOUYnUJYXrCrJuLy1SkGBsbSjGqg1d3l3GYxT99fbmIxMDAWYvS3enMtX9c2bWBgYKzNSDZkyYbvvgJc0tKBgYGxD6N/edm5i0hW/9I5goGBsTQjPzTOlduqpbr8EWNgYOzGmJu6UzLrFPUwMDB2ZlyVKPNAOxtHDAyMtRlHcSQH1yS4fAMaJW4MDIylGfnIi3H5RWay4ZtstsDAwFiOUU2y/aeVX3wWEi4GBsYGjGriq15qzl0YFB4BBgYGRhxcPvMtu1cMDAyMIPl2Qs+Ptf88OAwMjA0YnTbWcaB5eq2W4TAwMPZhdFLe3B3ieJ47UjYGBsZjGX9ST5NhbxjVJQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aQY6DQAwFUe5/aUaa3SgD1LchUpvqVRQi6MfCsd3eNrz231X7fv9Y/Dc3LxkyZCzL2E8X2e7nVbKhGu/wzjJkyHgBgwRNsgl+lbyUINDLkCFDBgh5nH3+dBkyZMjoB9xOEpmGbxkyZMhIi9i06UZ+ef6UR2pxGTJkLMhIH//Nzw+eb8iQIWMRxl5a6SZq4TvYjwwZMkYz+HEjSe/IRvt4FHZlyJAxjtEacQgzN/46+KCGDBkyZjPSpC3dHB/5IleDrciQIWM0465GW8rjOd4/wVqGDBmvYfBEMG3D8fvwlDHuGsqQIWNZRm0AgodjvkV+h8NdyZAhYzSDB8FOKsmfxcO6DBky3sMgqVtauKZlbe0VXH0lQ4aMmQwecDvpY3GQ4jxMy5AhYygjbYTxcJkGVt68OzwYkCFDxlDGIw36B0pi9MpkyJDxGkanZcaTuTSUB0WsDBkyhjJ4m56ngGmTLm3exf8eMmTIGMHojDvcFVL5y0InsTJkyBjEqAXBWiJYO+xES4YMGa9h1IYqeEJZG6dAPBkyZIxm8FZXLWi2ctVSg0+GDBmTGHu40nb/06Njf8bCZMiQMZTRKXRr4bVzCHFDuStDhoxlGWnoTEvfNA3l4Xvr/APIkCFjQUZneIIPh3Wi/kXCKkOGDBmnW++Xl6RIvrizDBkyZKQ3xXfmyWXxTEOGDBmDGKSITYe9aocNxcAtQ4aM0YxO6sY/81K2dlwqQ4aMoYwf7SZLqXGYewYAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
