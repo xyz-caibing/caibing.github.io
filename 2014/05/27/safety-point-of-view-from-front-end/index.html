@@ -5,27 +5,27 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>前端安全冷门知识杂谈 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="零、概述提起web前端安全，大家都会想到两个名词：xss和csrf。抛去这最常见，最被广泛应用的两者，我想谈谈一些难以觉察的，比较偏门的安全关注点。大概分为以下章节：  盗取无法用js读写的Cookie删不掉的本地存储函数覆写监听上报内存Cookie与硬盘CookieCSS带来的点击量泄露JSONP回调函数与UTF-7编码过滤与代码混淆心理学与社会工程学                    资料">
 <meta name="keywords" content="web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端安全冷门知识杂谈">
-<meta property="og:url" content="//caibing.xyz/2014/05/27/safety-point-of-view-from-front-end/index.html">
+<meta property="og:url" content="//caibing.github.io/2014/05/27/safety-point-of-view-from-front-end/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="零、概述提起web前端安全，大家都会想到两个名词：xss和csrf。抛去这最常见，最被广泛应用的两者，我想谈谈一些难以觉察的，比较偏门的安全关注点。大概分为以下章节：  盗取无法用js读写的Cookie删不掉的本地存储函数覆写监听上报内存Cookie与硬盘CookieCSS带来的点击量泄露JSONP回调函数与UTF-7编码过滤与代码混淆心理学与社会工程学                    资料">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/safety_001.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/safety_002.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/safety_003.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/safety_004.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/safety_005.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/safety_001.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/safety_002.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/safety_003.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/safety_004.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/safety_005.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端安全冷门知识杂谈">
 <meta name="twitter:description" content="零、概述提起web前端安全，大家都会想到两个名词：xss和csrf。抛去这最常见，最被广泛应用的两者，我想谈谈一些难以觉察的，比较偏门的安全关注点。大概分为以下章节：  盗取无法用js读写的Cookie删不掉的本地存储函数覆写监听上报内存Cookie与硬盘CookieCSS带来的点击量泄露JSONP回调函数与UTF-7编码过滤与代码混淆心理学与社会工程学                    资料">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/safety_001.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/safety_001.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -303,7 +303,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrElEQVR42u3a0W4CMQwEQP7/p9vnqsp1N4kRleaeEBzBE6TEZ+f1iq+vX9fvT1d3rq7nkVfvvCYuPDw8vOPQ2x9bgZ/HTL6bvPM8Ph4eHt4cb7Wi5ph2q9jbVPKY8fDw8D6Hl6Tae0v5c9KMh4eH9995z5g8oKSSgIeHh/eZvHbJzkux+RaSbD+DtRY8PDy8mHdrgX7n65H+Hh4eHt5xVz1fcG8FdF7k/TECHh4e3gAvDyJp/7dh3SrdPkeCh4eHd5e3WRjdao+1v7LXVPsxGh4eHt4AL3lyP0mC9+5JYHXKjoeHh3eJt/fYf7KUn0/W5rMCHh4e3gBvIoFujxokK3zBxsPDwxvjJQ/87Q/nCXEyfn5ga9nfw8PDw7vKy0Nvw00aY3uHDKJo8fDw8MZ4SUli79Nk+c6PT7V34uHh4c3xWsxJuaE9oJAUI5af4uHh4Q3w2rJCnljnZYWTYkcRAx4eHt4wr23Y720M7eJ+Ug7Gw8PDu8Vrg2iX7HYp3ztSsPwWHh4e3gCvbS/l5YmWsTd+UlzGw8PDu8vbC2Jk/soNJkri8fDw8MZ4bTkgP2J1slW01ZS6dIuHh4d3wDsJOi/y7k1cO314eHh407y9Ymi7TOdFhySxbicLDw8Pb4KXN7SSoNs0vZ2U9h48PDy8CV7bpM+T4Lx5lseQTxYeHh7ee3ht0yt/JykitIXgemPAw8PDG+CdNPjz4wXtZnNUOMbDw8O7yvsqr72wnlPtkwn9Y/PAw8PDG+BNDJ0kzXdfn29yeHh4eC3vna2sZMpuFYvx8PDwpnn5gr53sOC8Cbd54eHh4X0Mr23wt021ZBs4qlLj4eHhvZ23d2igLf7mqf/yD8DDw8Mb452kyAm+LUzkS/8f38LDw8Mb4N1NlPMJ2pvQkbIFHh4eXsr7Btj75CkT5fupAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACpUlEQVR42u3awW4bMQwEUP//T7fXAsW6M6TkuMDbU2AnXj0FWNIjvl7x9euPK3mlvf6+1/ufD194eHh4i6U/3ThZSvt6vvR2K/Hw8PA+w5stZfagf/qdJ0a+HXh4eHjfyZs13MnWtJ+Ph4eH97/wZi14gp8VCTw8PLyf4iXLbUOHGSnZjitZCx4eHl7My0+RvufnK+d7eHh4eOtT9bZInB1Q2I8m4OHh4d3g5ctN2tZZQ/y+QW/bZTw8PLxP8maBbL64979zNoDAw8PDu8dLHs35Y7otG/mGDkMKPDw8vAu89hisHZyaNeJ52FEcgOHh4eFd4G1uvIkM8lKUFzA8PDy827zZUdNs1GATZwzjCTw8PLzLvLae5A13Ams3LioVeHh4eNd4s2A3b383Yweb6AQPDw/vBi///p4fku0/py0/w8MwPDw8vBGvHQXYBA0JOAkgivYaDw8P7yhvNjw6C3zzhrsNLKLvCnh4eHiHeGe/5LdbkBeGU4MIeHh4eGd5SXO8CRryUjFb26oG4uHh4ZW8vJHNH9nt1uTbl2woHh4e3j3e2RB2lgOcGl8Y1jo8PDy8ktcuIo93N0MJ+bt4eHh4n+fNhgZmB/mzpjzBPP4D8PDw8C7wZhFAfrOkBW//tl4tHh4e3gd57cjUK75mGzoLKfDw8PDu8dqAtcXPAt/29X9EEnh4eHhHeUnokF95ZDArLcVQAh4eHt5R3n7RbWlpBw7a7cDDw8O7zZt9dH7jfEhr1sQP5yPw8PDw1rxZMVh18XE4mw94Pa4QDw8P7xovf1jnx1R58LqPJIqsBQ8PD++HeHmf3ka9CTsvGHh4eHjfwGtvtgkjNmExHh4e3m1e8sf5sdMsjNgcbtUzZXh4eHjbd+tYtl1oXjyOLRoPDw/vPO83uQA/pCA58Y4AAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -541,14 +541,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -566,6 +558,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

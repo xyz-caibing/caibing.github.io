@@ -5,25 +5,25 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>css实现九宫格(二) | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="书接上回，上回在这。  9个元素，每个50*50px，排成九宫格默认是border颜色为blue，hover到格子上变成red（兼容到IE6）        题目的关键是解决“公用边”，上次我主要做了两个方面的尝试：  用负margin使元素的border叠加用table的border-collapse实现边框合并  这一次的思路则更加简明，也是个人认为是更好的方法。感谢队长提供的思路。">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css实现九宫格(二)">
-<meta property="og:url" content="//caibing.xyz/2012/12/21/css-jiugongge2/index.html">
+<meta property="og:url" content="//caibing.github.io/2012/12/21/css-jiugongge2/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="书接上回，上回在这。  9个元素，每个50*50px，排成九宫格默认是border颜色为blue，hover到格子上变成red（兼容到IE6）        题目的关键是解决“公用边”，上次我主要做了两个方面的尝试：  用负margin使元素的border叠加用table的border-collapse实现边框合并  这一次的思路则更加简明，也是个人认为是更好的方法。感谢队长提供的思路。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge1.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge10.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge9.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge1.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge10.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge9.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css实现九宫格(二)">
 <meta name="twitter:description" content="书接上回，上回在这。  9个元素，每个50*50px，排成九宫格默认是border颜色为blue，hover到格子上变成red（兼容到IE6）        题目的关键是解决“公用边”，上次我主要做了两个方面的尝试：  用负margin使元素的border叠加用table的border-collapse实现边框合并  这一次的思路则更加简明，也是个人认为是更好的方法。感谢队长提供的思路。">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/jiugongge1.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/jiugongge1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQZLCMAwF0dz/0rCmQpL+EpmpyO0VBcHoeSFsS9uGx2s3jt4/H3y27Y4hQ4aMxzLSH95/t/bM/n3y/CFVhgwZCzCOMtj5awJAQRzMQ2KTIUOGDPIMT9MkUBkyZMj4VcLlB87z52XIkCGDM0jqTIMjn/7DWVyGDBkPZPBb979/fUt9Q4YMGY9i9AuQPIHy4OKoZMiQMZrBE1yntFmbk39XhgwZsxm8PYIXL3k7RS2Vf4lEhgwZCzDSYgAvD5CLs86CfiRcGTJkjGbwUNIja61FI91iypAhYwVGWlZML9R46bHWiCZDhozZjPvav/iGMl2gw0hkyJAxlEG2felmsZZSa+1fF2dxGTJkjGPwKzOyWeykYLKsFztcGTJkjGak03WSdWdRLo6vMmTIGMRIi4u1637eNNZpMpMhQ8ZsBnmU397xhgleVOBJWYYMGfMY/fRaKw+kvRPBP4YMGTKGMnhw6WauVqRs9YzIkCFjHCM91naSKdlc8j+A1ulchgwZD2Tw4NI2CFIGeJXGl4WQIUPGYox0s0iCrjVzBLHJkCFjMUZ6DVe77k+v1S4SvQwZMoYyfrAhCxci/RRRZciQMZrBR23qfnE07hmRIUPGUEaaZPsFA1LgjBOuDBkyFmCk7Vn8Z3ghoZP6ZciQIaNTHuhvEFGpQIYMGTLCw2otcZ9vFi+SuAwZMhZg8EMpD5TMXCtqypAhYzUGPzryS/9aak4jkSFDxgKMNySwiYfnrxDkAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3aQXKDMAwF0Nz/0ummi860wJcM6dh+rDIMsf1YCMny6xVf7x/X7zvJdTTa0ZivJy4MDIxpGcn05xPk/zp/8uh38mowMDB2YBwt7vz3+fPJopOwfj4XBgYGxtEz1fB6HnDzeTEwMDCqATcvOM8L2n/+bmBgYEzC6CVz1XDcK25vrsUxMDAmZOTh8vO/H+lvYGBgTMUYaUP2NvrvXc/3yBgYGEsz8ml6ydy9bYOLkhgDA2MDRl5A5mVt9Zmhg2IYGBgbMPJF9KbJN+DydPPiu4GBgbEoIylf85L1PEGsvrLyjiAGBsaijKQZ0HtmfAvvAoaBgbEoo3oAYiQQ54VxsqmHgYGBMbKgpCUwUsT+MQIGBsYGjDyMjrQHeolg1DDAwMDYjJFsk/Vq5TwQ5yVx4WwaBgbGtIxe6Vjd7k+Ccn6k7GLTDQMDYznGSJAdOWCRp5jRYQsMDIxtGHnheldrofoKooCLgYGxHCM/gPVEqpe/gsJKMDAwlmZUhxsPzb2Qnbx0DAyM9RhJolYtbvM0cSSJjPJcDAyMhRjjAbF6p9rgbH4rMDAwNmDkhy3uOgSWF9KFgIuBgTEt41288gD9yTYnBgbG2oxesMsn6x3X6CWpGBgYazPyINvbeqvu3udrwMDA2I2RB75qFK+G5h4SAwMDYzzJq266Ve9jYGBgHAXckW21XkL5yHcDAwNjEkavGZDfube1iYGBsRsjLx3zFmY+Ti+hbDY1MTAw5mN8AQ9BN/X2vIXAAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -518,14 +518,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -543,6 +535,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

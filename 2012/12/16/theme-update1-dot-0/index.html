@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>Blog主题更新-1.0 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这次的主题更新重点放在功能的完善与优化上，以下是本次（1.0）的更新内容：      更新记录 1.0 新增 - 安装slash主题 新增 - “新浪微博”按钮 新增 - 多说第三方评论平台 新增 - 站点静态搜索 新增 - jiathis分享按钮 新增 - 右上角tags开关按钮，以及tags板块 新增 - 代码高亮显示 修改 - 将“RSS订阅”按钮链接的xml文件改成feedsky中转页面">
 <meta name="keywords" content="octopress,主题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Blog主题更新-1.0">
-<meta property="og:url" content="//caibing.xyz/2012/12/16/theme-update1-dot-0/index.html">
+<meta property="og:url" content="//caibing.github.io/2012/12/16/theme-update1-dot-0/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="这次的主题更新重点放在功能的完善与优化上，以下是本次（1.0）的更新内容：      更新记录 1.0 新增 - 安装slash主题 新增 - “新浪微博”按钮 新增 - 多说第三方评论平台 新增 - 站点静态搜索 新增 - jiathis分享按钮 新增 - 右上角tags开关按钮，以及tags板块 新增 - 代码高亮显示 修改 - 将“RSS订阅”按钮链接的xml文件改成feedsky中转页面">
 <meta property="og:locale" content="default">
@@ -274,7 +274,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3aQQ7DIAwF0dz/0um2G+h8k6gCD6tKTQKPhYWxrwuPezC+/x09OXpm/u71xpAhQ8a2jHs6RhOQKQmPw+ZfkCFDRgcGWQR/i/9LNmu+NhkyZMggJA5LvyNDhgwZKwx+yOMh9Q8BV4YMGVsxahdq/B6stjWv5OIyZMjYkPHsUp79/Up9Q4YMGVsx7nBwahou74UhQ4aMsxk8wPHSZhq4ecnhR/lBhgwZzRj8Qo23VqQpa0yVIUPGoQxyrUaofMoVwPDLMmTIaMDgCw0OamGbBS+RypAhoycjTSNrR8DiEkmJQoYMGUczyAs8UNau6tIrueGMMmTIOJSRJrE8ZZ2HVN7+hcAyZMg4msET0fQCDkV6nCoHCbYMGTKOY/AmifWJg3Q0LazKkCGjAaMW7NIEuJY2I6QMGTKaMdIkNt2OWkvZD4wMGTLaMNLGr9pF23rwHSaxMmTIOJqRppQrbV7zMkBaeCjeCMqQIWMrRhpY0yZXEpRrB0oZMmT0ZNRKArxRjB8oObVY5ZAhQ8ZxDB5k06SXBPeggUOGDBkNGDx08hCcNrDyuYKWCxkyZGzOuMPx1M7xgijaIBkyZBzN4GP92FdrRKslzDJkyDiPsRJkeWrKwyUPuDJkyOjGWAl8vM2iVsgkq5IhQ4YMfmX/xgERnWplyJAhIzwCphdt801BZVQZMmQ0YPDp0/SSL7SW6MqQIaMDI00d+dLXg3jtCzJkyDiI8QEZdJNhLSkHogAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aS27DMAxF0ex/0+60gGPlPlENKupqZKSOrZMBy49eL7yuX+v++dOd5Fv36/v9y5YMGTK2ZVzDlTLSJ3PY+AkyZMg4gfG0ifE13/pcwCV7kyFDhgwSBAmP/xwyZMiQsZZRCc3/KODKkCFjEwYpYtOwOG7Y8evFtbgMGTI2ZPCu+/ev/2S+IUOGjK0YV7h4SpeOJHmQfbMrGTJktGZUErtK2ZmmoWg/MmTIOICRvib9pNJuQ8miDBkymjLGATQ9FkaCcuWNj3+VIUNGawZ/HC8vSR8sjZml1psMGTJaMyqhM83Z+HgApYkyZMhoyiDhtRIcx5vm5fTkxFWGDBktGPwQGPmElKb1UcFjEStDhox2DFK4zgXKSrstHSHIkCGjNyMdW646Ipb+WCgNlSFDxgEM/oJ0VcIoR8qQIaMfgxSK6Zo75kXKVHRmRIYMGccw0pHAXKO/kgKigCtDhox2DN5QqySCa3lvAq4MGTLaMSqNMMLgpAWppAwZMo5hpIlg2lbjyWicqsqQIeMARvq4dNxIitLSTmTIkHEAozT/nLonHUV8+DlkyJDRlDHXROPX9dYbKollyJDRmlEPduNYzu/kBywqIVuGDBn7MuZa/Ly5VhlwBnuQIUPGAYw08PFkjjTR+H+AD6WsDBkyZIRHJSrtNvLG+AsyZMg4jFEZSaZjTlQMy5Ah4wBGejCLMNKN8jGADBkyTmPw0nFVIObPmUtYZciQ0YjxA350slBj0FX7AAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -512,14 +512,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -537,6 +529,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

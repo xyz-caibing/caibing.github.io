@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>网易“聚合阅读”布局的实现 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="网易聚合阅读的出现的确让人惊艳了一下。流畅的交互,使碎片化的新闻资讯像报纸一样摊在眼前,这是信息大爆炸的时代产物。不管你能不能接受这种新阅读形式，事实上，每天越来越多的新闻层出不穷，还没被人看到就已成为了“旧闻”。回归报纸的版面设计，堆叠新闻模块，让用户告别一条接一条整齐的新闻链接，而是在一个版面上提供更多的信息，不失为一种尝试。 而抛去产品的层面，从前端方向来看，“聚合阅读”也有许多值得">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网易“聚合阅读”布局的实现">
-<meta property="og:url" content="//caibing.xyz/2013/05/03/my-news-reader-box/index.html">
+<meta property="og:url" content="//caibing.github.io/2013/05/03/my-news-reader-box/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="网易聚合阅读的出现的确让人惊艳了一下。流畅的交互,使碎片化的新闻资讯像报纸一样摊在眼前,这是信息大爆炸的时代产物。不管你能不能接受这种新阅读形式，事实上，每天越来越多的新闻层出不穷，还没被人看到就已成为了“旧闻”。回归报纸的版面设计，堆叠新闻模块，让用户告别一条接一条整齐的新闻链接，而是在一个版面上提供更多的信息，不失为一种尝试。 而抛去产品的层面，从前端方向来看，“聚合阅读”也有许多值得">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/myReader0.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/myReader0.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网易“聚合阅读”布局的实现">
 <meta name="twitter:description" content="网易聚合阅读的出现的确让人惊艳了一下。流畅的交互,使碎片化的新闻资讯像报纸一样摊在眼前,这是信息大爆炸的时代产物。不管你能不能接受这种新阅读形式，事实上，每天越来越多的新闻层出不穷，还没被人看到就已成为了“旧闻”。回归报纸的版面设计，堆叠新闻模块，让用户告别一条接一条整齐的新闻链接，而是在一个版面上提供更多的信息，不失为一种尝试。 而抛去产品的层面，从前端方向来看，“聚合阅读”也有许多值得">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/myReader0.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/myReader0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -283,7 +283,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3awWrEMAxF0fz/T6fQ7ZDkPslTGvlmNZQQ+7ggZEnHgZ/z9/n8nf7l6jvnx3N845EhQ8ZrGeft02dcbYt8n+xNhgwZ+zDSIHsVRu+3wjfN9yZDhgwZ96lb5/eqYC1DhgwZacAlb9bCsQwZMmSQS2zw0UXFu6/cxWXIkPFCRmfhb//+o/6GDBky/jHjXPqQ5iUJmvG6MmTIGM0gaV9nqoGX0tLhjIP3KGTIkPFyRlr8IuUzklzy0IyOXoYMGaMZ6eZqITVtCSy4l8uQIWMog4c/0nRM0z6+k7gfK0OGjJcz+AgFD3+89J9ehh+qhjJkyNiA0SmZ9a+jnSOQIUPGbEZt0KEG5g0GsooMGTL2YawarUiXT6++DwckQ4aMDRgkRKZJG28VLGhdyJAhYzQjbVu2ps8abU6UwsqQIWMoI12YhEsC6490HGm/QoYMGa9l1BqKtaZm7SCCf4AMGTK2YaTNgPTNTgnvASlDhozRjPtAxotl6YBXeqENjl6GDBnjGLUyWZpc8kSwGGplyJCxAYOE0VoiyC/APEFEkyMyZMgYxOCNxlUDGXHRv/S+DBkyZjBqQ6sdPD+CYOBVhgwZoxmd4LsqBHcCtwwZMvZh1MYs0kGNTvGuWG6TIUPGOEYtyes3ADqXWNTClCFDxpYM3k7gJbN0dGNBwJUhQ8ZQxqpkrn9wMmTI2JORjp+mbxJwcZxChgwZGzDSxgBfOB38IpfVWmNVhgwZr2X8AIPx2xmul1J9AAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aQY7DIBAEwP3/p73XSJGz3UBWMhSnyHYC5cOEGebnJx7Xy3i9cvfM+/PvT959vvvWgoGBgfFYxvVxfJ6gXXo+V742DAyMcxhtWMxDZ7LQPKzfXsfAwMAow2gLw8DAwPgGo00181kwMDAwZpLYnPE5DU7ufjEXx8DAeCCjDZf/+fkr5xsYGBiPYlzlSA4JxraV18TAwMDYm5EHuJzUHnaOpccYGBjnMPJ0MVnWH28r3nQmLyX6CQwMjC0Y+eFiMmWbACfsvC0DAwNjV8aqdPQbbV6DoRYDA2M7Rru4IoqXyfBYcwYGBsYJjLHmhrzo3zZkDAZfDAyMAxj5ItYmsW2x73Y9GBgYxzDGWivyLePMgWVUbsPAwDiGMRNq80OFdsaiWwQDA+MARr45y4PsTLNFhMTAwNia0TZD5AW7nNe2d9T/HhgYGA9nzBfL8laMscPL6EkMDIwDGKs2gjPpblvmw8DAOIeRB8ei+DVU4s+bP6IeNwwMjO0YeWhLgvLau0VTGgYGxgGMtvGrnawt6hX/FRgYGMcw2qJY264xuGONDyEwMDB2ZVzlmEk728Utzr8xMDAey2gLZO1kY7yxAwkMDIy9GW2QzY8nP5fw8hYNDAwMjLz4Nb/5a5Pe/NcwMDAw8uCbLy45eMivY2BgYKw6nkxeQdv2gYGBcQ4jb9tau8TkxUUzYmBgbM3IU8dV28H2yTa4Y2BgbMT4BXO1GQZnv58IAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -521,14 +521,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -546,6 +538,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

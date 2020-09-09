@@ -5,24 +5,24 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>和弦推导逻辑简析 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="诚然，吉他有上千个和弦。世界上最厉害的吉他大师，也无法一眼辨识出所有的和弦。 更多时候，我们熟记几个基本的和弦，然后通过一定的计算法则，去推导其他的和弦。因而推导的逻辑就非常重要。 《吉他三月通》一书把这乐理洋洋洒洒说了一百多页，我想试着让事情简单一些。 最后，我们将逻辑实现成一个小程序，可以方便打印出想要推导的和弦。 ###音乐与数学 既然是逻辑，都可以用数学去建模，然而音乐与数学之间，却有">
 <meta name="keywords" content="旧事">
 <meta property="og:type" content="article">
 <meta property="og:title" content="和弦推导逻辑简析">
-<meta property="og:url" content="//caibing.xyz/2015/05/25/logic-of-chord/index.html">
+<meta property="og:url" content="//caibing.github.io/2015/05/25/logic-of-chord/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="诚然，吉他有上千个和弦。世界上最厉害的吉他大师，也无法一眼辨识出所有的和弦。 更多时候，我们熟记几个基本的和弦，然后通过一定的计算法则，去推导其他的和弦。因而推导的逻辑就非常重要。 《吉他三月通》一书把这乐理洋洋洒洒说了一百多页，我想试着让事情简单一些。 最后，我们将逻辑实现成一个小程序，可以方便打印出想要推导的和弦。 ###音乐与数学 既然是逻辑，都可以用数学去建模，然而音乐与数学之间，却有">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/chord1.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/chord2.png">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/chord1.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/chord2.png">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="和弦推导逻辑简析">
 <meta name="twitter:description" content="诚然，吉他有上千个和弦。世界上最厉害的吉他大师，也无法一眼辨识出所有的和弦。 更多时候，我们熟记几个基本的和弦，然后通过一定的计算法则，去推导其他的和弦。因而推导的逻辑就非常重要。 《吉他三月通》一书把这乐理洋洋洒洒说了一百多页，我想试着让事情简单一些。 最后，我们将逻辑实现成一个小程序，可以方便打印出想要推导的和弦。 ###音乐与数学 既然是逻辑，都可以用数学去建模，然而音乐与数学之间，却有">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/chord1.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/chord1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -312,7 +312,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aS27DMAwFwNz/0um2QeHgkZQLWBqvAsOJNVow/Oj1iq/3r+vqfnJdfev7W5ZdGBgYj2X0XpwvIgckz19SMTAwDmBcRbDe52SbkrCerA0DAwPj+zPJIpI71fdiYGBg5Olar7r8/nYMDAyMSRE76X3lKeDttTgGBsYDGfmy/v/zLfMNDAyMRzF6A8hJ0Fy1ko/fxMDA2JrRa6XlLf5e+thr7WFgYJzAuLt87R0Ly5t0GBgYezMmi6iOFuZHyiIMBgbGdozeYYhkQZODYuUBAAYGxgGMHJOHyxyWl8GXW4yBgbE1Y21bLQdXE8TCRmBgYGzEqC4uX1CvMK4mhR+TWAwMjAMYyRKrhWv+3cKo8u99DAyMYxjVMnIUIluzi8vgjoGBsTVjsuhJ2Zm/qzmDxcDA2IiRN9d6aV8eWPNE87KIxcDA2JRRTRDzYWcvccz/BsqPYmBgPJyRN/FXHbDohdcCDAMD4wBGtbmWN9ruSxMxMDD2ZiShrcroHa0YlcQYGBiHMfLW2/yY13yzMDAwTmPkRWlveDlpwBWOWWBgYGzEeBev3mGLajCtBnQMDIy9GZNgV23cJ8E6SRZHA04MDIzHMnpBdtWQYFIkY2BgnMZYVdz2Stb8HyCqxTEwMDCKhzCSgWUvxcTAwMDIU8NV25EcsFiWGmJgYDyQkRSxvVZ+dZBQLYMxMDBOYIxKx0EJWk3+eq09DAyMhzN+ALcCslBIuFLhAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aQW7DMAxEUd//0u4miwCplJmhHEDU9ypw3EjPC5akeF3ydb9d73dGz3xe8ydHqyy+YMCAsS1DWX5+R9n0fKOjF6SvAgMGjBMYowjmhtcsWGdPwoABA4byc8om5gE0WxcGDBgwlHStXgbPQzkMGDBgZEVsPfjq3z5Yi8OAAWNDhh4uf//5kfMNGDBgbMW4zavS3H9iP69fhgEDRmtGluqtQippqFESw4ABoylDX17fxPzXlKTTHhSDAQPGAQw98D3RgHMH0YYBFwYMGE0ZbkO/0uK3jyQrHUQYMGC0ZsyX18e53CPSR2AwYMBox8iGw7KA66aDxoAFDBgwWjPWJojZoEalrIUBA8Y5DDekug01HamzYcCA0ZvhJnZuWasUxlmq+s+0CAwYMJoyVjXasrZaNlIWNt1gwICxLaOSxunHmdkdOzWEAQNGa0ZlOFUf3qqXxMPXCgMGjAMYlRTQPUPMDh6+NOBgwIDRmlEfj6gfALiJ4xAJAwaMwxiVEKmMSmTffimqYcCAcQBD35a+FTcch0NgMGDAOIzhDl5k9/Uy2EhSYcCA0ZRxm5dbmrrDGfprvbL/DDBgwNiQkQU7d6RMb9tVGnMwYMDozXBHIvRxCv1gMqtGYcCAcRrDGGuQS9b6cJhRBsOAAQNGlF3W8cZfwYABA4Z5VFlprrnFMAwYMM5h6IMUypCE2+LXm3ELanEYMGBsyNBLx/nW3cMDt4hdcKgJAwaM/Rh/Dc1qmIlvBhIAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -550,14 +550,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -575,6 +567,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

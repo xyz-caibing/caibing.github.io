@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>统一处理异步的js回调 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="js编程时经常会用到异步处理，而异步会带了所谓的并发问题。比如，你需要向服务器发出多个ajax请求，然后在返回所有结果后做进一步处理，同时要显示动画。因此我们需要用到以下的方案。">
 <meta name="keywords" content="js,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="统一处理异步的js回调">
-<meta property="og:url" content="//caibing.xyz/2013/10/06/handling-asynchronous-js/index.html">
+<meta property="og:url" content="//caibing.github.io/2013/10/06/handling-asynchronous-js/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="js编程时经常会用到异步处理，而异步会带了所谓的并发问题。比如，你需要向服务器发出多个ajax请求，然后在返回所有结果后做进一步处理，同时要显示动画。因此我们需要用到以下的方案。">
 <meta property="og:locale" content="default">
@@ -264,7 +264,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aQY6DQAwFUe5/aUaa3SgD1LchUpvqVRQi6MfCsd3eNrz231X7fv9Y/Dc3LxkyZCzL2E8X2e7nVbKhGu/wzjJkyHgBgwRNsgl+lbyUINDLkCFDBgh5nH3+dBkyZMjoB9xOEpmGbxkyZMhIi9i06UZ+ef6UR2pxGTJkLMhIH//Nzw+eb8iQIWMRxl5a6SZq4TvYjwwZMkYz+HEjSe/IRvt4FHZlyJAxjtEacQgzN/46+KCGDBkyZjPSpC3dHB/5IleDrciQIWM0465GW8rjOd4/wVqGDBmvYfBEMG3D8fvwlDHuGsqQIWNZRm0AgodjvkV+h8NdyZAhYzSDB8FOKsmfxcO6DBky3sMgqVtauKZlbe0VXH0lQ4aMmQwecDvpY3GQ4jxMy5AhYygjbYTxcJkGVt68OzwYkCFDxlDGIw36B0pi9MpkyJDxGkanZcaTuTSUB0WsDBkyhjJ4m56ngGmTLm3exf8eMmTIGMHojDvcFVL5y0InsTJkyBjEqAXBWiJYO+xES4YMGa9h1IYqeEJZG6dAPBkyZIxm8FZXLWi2ctVSg0+GDBmTGHu40nb/06Njf8bCZMiQMZTRKXRr4bVzCHFDuStDhoxlGWnoTEvfNA3l4Xvr/APIkCFjQUZneIIPh3Wi/kXCKkOGDBmnW++Xl6RIvrizDBkyZKQ3xXfmyWXxTEOGDBmDGKSITYe9aocNxcAtQ4aM0YxO6sY/81K2dlwqQ4aMoYwf7SZLqXGYewYAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQW6EMAwFUO5/6emmi0pT0LfNVCV5rEYMIXksLMfxccTX68f1fie5f/a2s7HHJy4MDIzHMl6X113f6Zr3Ple+NgwMjH0YZxOfPXNGvZ4+mTF/EgMDA6M68QTWmxcDAwNjEkzzVDJPEzEwMDB6ofN6smpoTu7fsBfHwMB4ICMvlv3974+cb2BgYDyK8SpeSZpYPQaYrOf7PRgYGEszeondvYW5eaKJgYGxNmMCuB7bK7c1mzwwMDC2ZFwv/bZIX0wiT3kYGBgbMHovmgTQXjmveeaAgYHxcMZ1QLy3oF8N04U2CwwMjA0YvSJ+fkiQL3TUZIaBgbEoI3lRNbnsLavXCna6F8fAwFiOkZTA8mfmrRt5WomBgbEPo1rL6m1QJ0nnDd0iGBgYj2X0Erhq8J0cJBQ+AQYGxqKMSaNDNUDnyWJ+UHHabIGBgbEoozq42gqWj02exMDA2I3Ra5VI/o3CZXGL+wsSAwNjaUZvWB4Q8+JadACQvA0DA2NRRrKUwpayuMTk0DQ5/sTAwNiBUd24VkPt/ICzcDyAgYGxGSO5c9sWtJg43tzxgYGB8S8Z85bT+Ua3mQhiYGBsw+gFu7zQNvko1aMFDAyMtRnzyarhu/rJyptYDAyMRRlJ6JyUw6qfqYrEwMDAyBsgelvfavPH0RuAgYGxDSP5d1JcqwZuDAyMfRh5Y1YeLvPta7UKiIGBsRsjHzZ/ptqQUW0KwcDAWI7xBZ55A/EE4DXvAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -502,14 +502,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -527,6 +519,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

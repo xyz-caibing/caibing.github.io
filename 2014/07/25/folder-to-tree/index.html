@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>一个文件夹的自我介绍 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#folder2tree  用字符展示文件夹结构  前言 Before:如何介绍一个文件夹，简直纠结。  要么图片，如果在截图前，你真的愿意，一层一层一层的剥开我的心。你会鼻酸你会流泪；要么靠说，那么你可能得这么说：从前，有一个文件夹，文件夹里有两张图片；大图片在跟小图片讲故事…讲个什么故事额           因而，用纯字符描述文件夹的小工具必须得有呀。github here.">
 <meta name="keywords" content="js,工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个文件夹的自我介绍">
-<meta property="og:url" content="//caibing.xyz/2014/07/25/folder-to-tree/index.html">
+<meta property="og:url" content="//caibing.github.io/2014/07/25/folder-to-tree/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="#folder2tree  用字符展示文件夹结构  前言 Before:如何介绍一个文件夹，简直纠结。  要么图片，如果在截图前，你真的愿意，一层一层一层的剥开我的心。你会鼻酸你会流泪；要么靠说，那么你可能得这么说：从前，有一个文件夹，文件夹里有两张图片；大图片在跟小图片讲故事…讲个什么故事额           因而，用纯字符描述文件夹的小工具必须得有呀。github here.">
 <meta property="og:locale" content="default">
@@ -265,7 +265,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQW4CMQwFUO5/aSp11api+N9hUMm8rBAapnlZuHbs2y1e9+/19/Ojb35+/3cdv/nR216wMDAwPpZxP1z5hnJ2/nyyNwwMjOswklcfA5JAfHxA+RFgYGBgJEGwDcRJgnhMwsDAwJgVrklQzp98a8DFwMD4QEZSxK5st72YO7EWx8DA+EDGSmPg7M9v6m9gYGD8Y8a9XLNAmR/QcFcYGBhbM9avutqtr4CfPI+BgbEpoy1T25Qu2e5Ksvjr/wYGBsbWjBawPiLW/vYJDwMD4zKMpEnZbrRNB2cFLQYGxhUYsyuw2RDGGZdxGBgYezOSlmE+ipGnmOtFLAYGxtUYSRBc31Z7Ade2JTAwMPZmJKFzVqzODmJ4VYeBgbEpIw9t7RhEHpTbBDHqb2BgYGzNSALcelBuE8fhsAUGBsYWjDxovmrTs0DcjothYGDsx8iD6fEZrDQpk9bCk3diYGBsylgH5O3PPPlrW6oYGBh7M2YF5Kw9kGy0hWFgYFyBMbvMagNxm1y2w2cYGBgYs0RtNlTRFrEYGBhXYLRB84zQ3A52FEUsBgbGFox7udpSc3YQ9fsxMDC2ZuQrTx/zy7h2sKOYGcHAwNiOsR5kV0L2rC1RjFxgYGBsxEjStaRJ+bKLs/hiDgMDAyMJkXkbsr2SK4pYDAwMjNHl16ypmT+DgYFxNcasiM3/fDuWUZe4GBgYWzNWGgOvSgeTJ5cAGBgYn8r4AsF2rWMldy7HAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aQW7DMAwEwPz/0+k1QOt0SSktTI1ORuDKHh9YiuTjEa/ny0p++b6udnu/5+aFgYFxW0by+Gdx5dTX36+uk0+DgYFxAuMqgr2/TgLl+5deuRMDAwMjZ6ynj8lzMTAwMKqM5GFJUO7tjIGBcSYjOY7uSgf/+SyOgYFxQ0Zedf/764/0NzAwMG7F+ES5v/daz4WFgYExm7HrMSuH1W1HYgwMjNGM/JiavGI+4NUL5YUcFgMDYxyjWkTbFiKLYTriYWBgDGWsJ3nJ8TVvly6FWgwMjHGMXuE+bytWD8DlMQsMDIzRjPWUrtqMrJbqouCLgYFxACM/jlZbm3uD+OXbYmBgHMDYNe7QC5e9ZPGHmREMDIxjGCspXa+cl98fTYtgYGCMY1SL+7vKanmbofAJMDAwRjPy0vzeZLHaQC3PjGBgYIxg5MW16oBXtYiWp6Hl/gYGBsZoRrVLmIN7u13+S8DAwBjNyAtbzUyzOPK1cqzFwMA4gRGNNRRDc77n+qfBwMA4jdELu/lRtvc5omYABgbGaMZKk7I3KlEN6L88HQMDYyhjZVB1pXmQnz0jKgYGxmhGvnpjE9V2ZrJD9TNhYGDMYPRGIvIUMGlzbmhIYGBgHMDIm47rY16faDxgYGBgJOMR1ZdbKdg9en+AgYFxGCNvZ+aFufxYuy3gYmBg3IqRpG55stgbmFgK1hgYGKMZ+dHxl5DX2ie5M/mUGBgYQxlf14VqmJrbu34AAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -503,14 +503,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -528,6 +520,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

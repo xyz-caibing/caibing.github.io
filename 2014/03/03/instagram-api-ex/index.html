@@ -5,24 +5,24 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>instagram图片拉取小经验 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近喜欢上了instagram，分享一下获取照片的经验。">
 <meta name="keywords" content="web,经验,产品">
 <meta property="og:type" content="article">
 <meta property="og:title" content="instagram图片拉取小经验">
-<meta property="og:url" content="//caibing.xyz/2014/03/03/instagram-api-ex/index.html">
+<meta property="og:url" content="//caibing.github.io/2014/03/03/instagram-api-ex/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="最近喜欢上了instagram，分享一下获取照片的经验。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/instagram1.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/instagram2.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/instagram1.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/instagram2.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="instagram图片拉取小经验">
 <meta name="twitter:description" content="最近喜欢上了instagram，分享一下获取照片的经验。">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/instagram1.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/instagram1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -283,7 +283,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aS27DMAxF0ex/0+k0QGv7PtJOIep6FKSpotMBy9/rhZ/3Tc/naUevP9+5+ZEhQ8ayDP7F/DO/z08/w79XhgwZ+zCOItj566PL8eBLzjm/mwwZMmSQq/MQzDEyZMiQ0WeQE/jV/y3gypAhYykGb5CdfzG5Og/Ej9TiMmTIWJDBu+7ff/3IfEOGDBlLMToDyHRImaaPwa1kyJAxmsEDHBk98rK2dubF78qQIWMoI12DIE2xNATzQUKQt8qQIWMQg1yXXIKPFtKhJhmjypAhYwdGCug3znigfzDUypAhY1kGHz2mYZenfbXTZMiQMZXRWYNIk0ieVrZqcRkyZGzAqLW90vEkL4wRWIYMGRswai2wWristf4v/jHIkCFjNKMWOjurEqQZR65eTBZlyJCxIIMnbc915m9YFJMhQ8Zoxl0lK1+J6A87L5YtZMiQMY5Ra9OnQTNem0j/lDJkyNiGwaeBtYWMu4rhP96XIUPGaEZnzaK2kNEZG6DSWoYMGUMZ5EO8JZe28DqpZJwgypAhY3EG6syV2mdpIC4OJ2TIkLEBIwXUEsq0eOYNOBkyZExlvMOHt95IanhXcilDhozZjP5AsT9a4KlqcV1MhgwZIxg8gKYNOE4iP5UhQ4aMWhuuVrLGKxS8lJUhQ4aMcNmCF8ApTIYMGTI6dXA6jCQwNHiQIUPGBoy00Z+Wo/3i9iJBlCFDxmgGLx1JEOTn1Mra1iBThgwZ6zF+ADD9Qc+W4ySyAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aQW4DIQwF0Nz/0uk2UjXk254sGB6rakoLj4VlsF+veLw/xueXqzn/569nXq1y88DAwNiW8V6OZIH1X63nXM3M94aBgXEO42pz6zlVZLJiPhMDAwMjSQSTTSQBtHp8GBgYGEm6lgTidYBeJ4IYGBgYvUtssnAv1Obfb7iLY2BgbMiYh8jf/fyT+gYGBsZWjHdxrGHzAN3cFQYGxqMZeYDrpYDVjY72g4GBcQAj2WKSOOZ/Wy0kvO46aQwMjK0Y+bNXryWi15BRbTLDwMA4gZE8rvXaI5IWjd73Zg0WAwNjc0Y1jOYJXO+ymhwZBgbGCYxeG0Qv+PZSzEKDBQYGxkMZeSicvOf1mi2SUHtZicXAwHgco/r4VX2GywN09QgwMDDOYcwLkEk6mLeOVf8PBgbGOYy8iJhcNfM79CgpxMDAOIBRLXDmgTW/+uZBf9T1hoGBsTmjl7RNGjV6SWd06hgYGI9jVMNf7wh6ZYZC6wYGBsajGXmIvOu5bRI5v6yCgYFxDKPXWtF7qus1n11iMDAwDmAUSoY3Bc28taJc5cDAwHgoo9d+MX9QmyeOGBgYz2a8iyN/vs/D9OjiWu0ZwcDA2JCRj3l6l28uubKW67QYGBibM6qPXMmjf14KzUM5BgYGRu/xq9fmNUn7omYLDAwMjOC3yfekIFFo2sDAwMBotY5NSgvrndwQcDEwMDZk5E1dkyUnmC+HgoGB8WhGfnW8t+Ywf8LDwMA4gPEHiVOyUMhkCD8AAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -521,14 +521,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -546,6 +538,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>分享一个IE6，7的CSS hack bug | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="###一、分享一个IE6，7的css hack bug。     IE和我们之间，肯定有一个是傻逼，如果它不是，那我们准是。不然很多事情没法解释…  ——多么痛的领悟">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分享一个IE6，7的CSS hack bug">
-<meta property="og:url" content="//caibing.xyz/2012/12/17/share-a-css-hack/index.html">
+<meta property="og:url" content="//caibing.github.io/2012/12/17/share-a-css-hack/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="###一、分享一个IE6，7的css hack bug。     IE和我们之间，肯定有一个是傻逼，如果它不是，那我们准是。不然很多事情没法解释…  ——多么痛的领悟">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/css_hack.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/css_hack.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分享一个IE6，7的CSS hack bug">
 <meta name="twitter:description" content="###一、分享一个IE6，7的css hack bug。     IE和我们之间，肯定有一个是傻逼，如果它不是，那我们准是。不然很多事情没法解释…  ——多么痛的领悟">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/css_hack.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/css_hack.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -273,7 +273,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3ay4oCMRAFUP//px2YlSC0t6riMJ2cXok2SY6Loh55POLn+fu8f379JnmuV3t/c/GDgYFxW0Zv4/z96yNeM5K9MDAwzmEkQbYaEK+PnsOuz4aBgYGRvHMddqt/BwYGBsY84ObBdFWliYGBgZEvXU3yJkH5i7U4BgbGDRmTwcC3P//RfAMDA+MfM57FJy9oV7XholNhYGBszbgeNybbV1v8efqYJI4f6loMDIwtGNXyNS8mq6VptamHgYFxDqNarPYC63W4zMN9ocTFwMDYiNEbIpbLy0FPLPpDMTAwtmbMRwW9EWZe1uarYWBg7MroXXGohtfeNbLCsBMDA+MARrXtlYfC6uAzL3cLGS4GBsbNGUm7LW/oV1dYlSBiYGDszZg02qrvVFNJDAwMjNdfewPIvHvXSxnLA04MDIzDGAsW7TXOBmUtBgbGCYzJhYbqRDQvbgszWAwMjE0ZedI2H0Yme+Uj0mbuiYGBcUNG77LXpBytBtlmSoqBgbER44v/RzyeTFZu5rYYGBgbMarDwsmgcd5ui4aXGBgYGzHypVdVjkkg7oVvDAyMXRnP4lNN3ebHjfbCwMDYmlFdOknj8otiSaKZ7IWBgXECoxpkk5ZcnhquGjxgYGCcwFh7rOo4cxL0MTAwMKrp4PxSRTOTxcDAwGgdKy9Zk2TxQ8jGwMA4gJEHzfzXvJXWC/TNWhwDA+OGjGoBmZSj83TwG8NRDAyMGzJ+AIP4x2VANoztAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQVLDMAwF0N7/0rClwyR8SQYm9suqU9LYLwshWXq94uvj4rr/69d7vj/t6vPVrxZcGBgYj2Ukm6gC7re46lcYGBinMfKweB/xqryrF5rvDQMDA6N6T/7NqnUxMDAw8u1W681/DrgYGBgPZPQKy6uH5sG3VyRjYGCcxqiGyL/8/Cv9DQwMjEcxPopXNVDeh+PJTt5WxMDA2JpRPfTvJYU5vrcfDAyMvRmTYYj7xfJSs9paaPZOMTAwHs7Ii8Y8vOaH/vOUFAMD4wTG/MxqUr7OXxAGBsbejOTAK390MkKRtyGrq2BgYJzA6C1cHcKYHKstbm1iYGA8hJEvUz4Caw1q5O2Ht+8xMDAOYOQJXy+9Kxyc9VoIGBgYBzCWtRJbjYHewdzltAgGBsamjPmQ1qSGTl7WD99gYGAcwMjLyFUNzupa5dQQAwNjI0bemKyWuKual4VGJgYGxjGMXllbfQWTlPTyVxgYGFsz8gOyPE3MJyJ6x3zN4TAMDIzHMtZOmVUL2moSeZk4YmBgHMCYJIXJYsn91YEMDAyM0xiFlmGcPi4oQWMqBgbGroxeYzLZ3KokMmkSYGBg7M1YFbN7CWK1hZmsiIGBsSsjH9VKFp73JfI9YGBgnMaoBr5J4TpJ+36YGcHAwMCYBMT4qC7fVXOaAwMD42BGryUwb4hiYGCcw0hStyTUToa9qmUzBgbGOYy8dJwc9+fP7P0bwMDA2JTxCR3fQc8DInk0AAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -511,14 +511,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -536,6 +528,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

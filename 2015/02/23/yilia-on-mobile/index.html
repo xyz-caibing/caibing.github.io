@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>hexo主题Yilia在移动端适配的一些事 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Yilia是我去年9月开发的主题，本来只是想给自己玩，因而开始有许多“任性”的设计。诸如“我本可以兼容ie，但我就不”这种…结果star数越来越多，半年里，居然成为了搜索“hexo-theme”最多star数的主题。感慨大家跟我一样任性的同时，也是受宠若惊，万分感谢！ 而年前的主要矛盾，是日益增多的star和fork数，与功能还未完善之间的矛盾；以及越来越多的bug被大家发现，与我忙得飞起只好假装">
 <meta name="keywords" content="主题,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo主题Yilia在移动端适配的一些事">
-<meta property="og:url" content="//caibing.xyz/2015/02/23/yilia-on-mobile/index.html">
+<meta property="og:url" content="//caibing.github.io/2015/02/23/yilia-on-mobile/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="Yilia是我去年9月开发的主题，本来只是想给自己玩，因而开始有许多“任性”的设计。诸如“我本可以兼容ie，但我就不”这种…结果star数越来越多，半年里，居然成为了搜索“hexo-theme”最多star数的主题。感慨大家跟我一样任性的同时，也是受宠若惊，万分感谢！ 而年前的主要矛盾，是日益增多的star和fork数，与功能还未完善之间的矛盾；以及越来越多的bug被大家发现，与我忙得飞起只好假装">
 <meta property="og:locale" content="default">
@@ -275,7 +275,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHklEQVR42u3aMY7DMAwEwPz/0zngqmvsLEk7OEujKoVjcFwsRImvV7zev+vv76OVPH/0/vNnLlgYGBiPZVTLqv736A3n7Or7MTAwdmAkIXteUB6aSdF5bRgYGBjnW7c8HOdIDAwMjEngJgX1whoDAwOj2sRWQ7Payn6pF8fAwHggo3cx8J3ft99vYGBg/HvGu7WSSK1eFbwHCwMDY23GeUGT8E2is7q5/FAhBgbGooz8RdWo7X2mZpOMgYGxNCM/SsuLqB6lJZvFUSuLgYHxcEZvhGISkfm/knGxw14cAwNjIUY1Uietb68xbt7HYmBgLMrobROTGE0CfXJVgIGBsQMj2ZwlT84Lql45YGBg7MCotqY5YxLB5ctRDAyMLRmTwM1LLMyDnH8aDAyMpRnJK6rhWP0cvQ1i+bwQAwPj4YxJzPUuOKv/6g1/YGBgrMGoHpBVRyLuiG8MDIw9GfPDr7ytzRva8t4WAwNjUUZ+rJ8PhFWP8KKjtCTcMTAwNmBUG9pqwzkP9w91YmBgbMC4aiXXlhcPW2BgYGzA6IXv/MnkeK66fcTAwFiPcV+YzgcpCqGMgYGxNGPSuFaDtXrollMxMDB2YFRDNh/FmF88XHbchoGBsQSjGny3DHi1BjgwMDAweheNybBXNXY/RDwGBgZGa+NYjddbri0xMDAWYiSFVtvOXhzn7TEGBsY+jKsGJvKNYP7MxUgMDIznMX4A1jzbGWGTnKMAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aQZLCMAwFUe5/6cwBmDj9pQAVubOiKGL7sVBJll4v/BxvT+eXZ78h67ceGTJkPJZxLB+yAdl4zXvfi59NhgwZ+zDWhzvb+AxMSGsqP5sMGTJkrBk8HKOgCfaVIUOGjP5yPEzXVpAhQ8bODFLE8m3StO+rtbgMGTIeyOCH+P7nj/Q3ZMiQ8SjGET61JK8WlINTyZAhYzSj04BM25nrhK/TEJUhQ8ZsBiks+XgEf5e8FYRsGTJkbMngy/EkMh2z4NdwMmTI2IERvICv5DoJZdwAkCFDxmhGOiRRa3zWjpgWyTJkyJjKSC/308QuDalFtgwZMjZgkEPfld7Vxr8uVpMhQ8YGDBLyUmSnwZCGbBkyZMxmpONcvLAka3aK2NNSVoYMGeMYfPt0GIKXtXy1029kyJAxmsEblrVuQ5o+thqrMmTI2IaxDotkg1rSmTYbUIYrQ4aMEYx46ArD0hQwDfH/3BrKkCFjKKNzxdaB1YpktLIMGTKGMshYA08BeaBMhy0u9pIhQ8YGDB5AO2lcmj7eNmwhQ4aM0QweWO+6SktbnjJkyJjNOMKHh1Ty7kfqbxkyZIxj9JsB6UhEWioHwxYyZMgYzUgvuWqFKy+A+UWbDBkydmOk1/2/SvtO/xQZMmTIAMflq5E/Iv1ehgwZMu4dp0jbnCRky5AhYwdGeojapVsHcxGsZciQMZrBS0d+RD5yUbvOKzY1ZciQ8TzGH9kDk2F4Ojq9AAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -513,14 +513,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -538,6 +530,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

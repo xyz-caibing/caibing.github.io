@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>模式应用小分享——中介者模式(mediator) | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="你需要一种设计模式，一定是哪里出问题了。这问题是指语言天生缺陷，不得不去寻找一种通用的解决方案。  程序设计最后的终点，就是要找到一种解决方案来解决问题。这句话正确无疑。但我又想起有个冷笑话，A对B说：我教你怎么去赢这盘象棋，B问怎样，A回答说：吃掉对方的“帅”就赢了啊。略去中间的过程，直接描述到结果，这其实是毫无意义的。而设计模式，又恰恰关乎中间解决问题的过程。">
 <meta name="keywords" content="coffeescript,模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模式应用小分享——中介者模式(mediator)">
-<meta property="og:url" content="//caibing.xyz/2013/01/02/mediator-model/index.html">
+<meta property="og:url" content="//caibing.github.io/2013/01/02/mediator-model/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="你需要一种设计模式，一定是哪里出问题了。这问题是指语言天生缺陷，不得不去寻找一种通用的解决方案。  程序设计最后的终点，就是要找到一种解决方案来解决问题。这句话正确无疑。但我又想起有个冷笑话，A对B说：我教你怎么去赢这盘象棋，B问怎样，A回答说：吃掉对方的“帅”就赢了啊。略去中间的过程，直接描述到结果，这其实是毫无意义的。而设计模式，又恰恰关乎中间解决问题的过程。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/mediator1.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/mediator1.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模式应用小分享——中介者模式(mediator)">
 <meta name="twitter:description" content="你需要一种设计模式，一定是哪里出问题了。这问题是指语言天生缺陷，不得不去寻找一种通用的解决方案。  程序设计最后的终点，就是要找到一种解决方案来解决问题。这句话正确无疑。但我又想起有个冷笑话，A对B说：我教你怎么去赢这盘象棋，B问怎样，A回答说：吃掉对方的“帅”就赢了啊。略去中间的过程，直接描述到结果，这其实是毫无意义的。而设计模式，又恰恰关乎中间解决问题的过程。">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/mediator1.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/mediator1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -275,7 +275,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOUlEQVR42u3aQW7DMAxE0dz/0g7QVYNA8gxHBiLqexU4jaznBUuRfL3k6/q7Rve/vx3d+X//+/NotWUXDBgwtmVc06v2SHdb+rOGa8KAAeMAhr507bfzjSp/efNcGDBgwBBSwOTzgtcHAwYMGNP0Tn/wKKQmVBgwYJzDUA6xq+p5840+fhaHAQPGhozkwU9/frC/AQMGjE0YV3DpzU43oNs7gQEDRmtGLe17ojynjHHc7BAGDBhNGcnwVpJc6jmehIQBA8aRjFpM04tlbqHNfkMwYMBoxNALasqxU0/paiOtEhIGDBjtGLWDazKc6q6gBG4YMGCcw3DHudxmQJ7L3fQ3YMCA0ZRRSwSlIGiW/vXAPcxwYcCA0ZSRHCZrx1o3QZRCPAwYMA5g6KHTHQjTA7pb+Tem22DAgNGUobc5a9vSj6ZSsggDBowDGDpJKZPVRjeMNgAMGDCOZNQOlrW0stZmMA6xMGDAaM1wRyiSkQs33bxJRmHAgNGasbYN4AZr90istw1gwIDRj5EU3ebpXS0R1EcusrMvDBgw9mMYLcNFm3B/a9QOYcCA0Y6Rj0GsPdAm/xhgwIDRj3GZlztyoW/aXe3jDgwYMFozkpDqpoNJWS0P1jBgwNidoQRZ/UhZfE/COsWqIQwYMBox3CA7f3y+mrK+VDWEAQPGkQy9balTlfB9swcYMGDAMMv9+srLgjIMGDAOYOQDqXpTQSnA2YdhGDBgtGasHafQW4x5mrigvwEDBoxfZ7wB48lLqYJSSvAAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3awY6rMAwF0P7/T/etR30w9zp0JMJhVbUp+LCwEtuvV3y9D67zXz9XHq3//P71jQsDA+O2jOTx7a+f9z8P9HNNHhsGBsZzGEcZ7GjNESZnn+fMPDYMDAyMWUI8D+t8C4iBgYFxFaM9cCabQgwMDIxzRr6ZSwDtHf70LI6BgXFDRp4u//7zV/obGBgYt2K8yyu5w3pYdVQYGBhbM/LH5IMRbSMzbwb88hQMDIxNGW2Zvi2HzQ669aAYBgbGIxltEMNMPyIVCRcDA2MLRpJYV5qOyX+vapFiYGDsylhJf7Nkeh7iV6ZFMDAwbs5oy/TJN0nCzbekFwxYYGBgbMFoi26zNmfyuW2j/qe/gYGBsTUjKXLla1Ze0LDmj4GBsSljBlipfeV3Kw7MGBgYj2GsFOjzRDkr6hWbQgwMjE0Zs1GJ2XBYUphrD70YGBhPY8xGLs7X5IW5vC36IwYMDIytGXlAbVk/57VH3MPXgYGBsTUjb1jOymrDDV85xoGBgbE3Y32oq02+ySE2fxYGBsYzGd8e+Zo1CaKNIAYGxtaM9Q1i2/Jsd6y/vFwMDIxNGe/yagcsVpqjBRUDA2NrRn61pKuGzPLCHAYGxt6MurAVw/I03Vb4MTAwnsnIE1+7EZy9pjr1Y2BgYJQhJsHlLYfkewwMDIy2SZAH3Zb2Lku4GBgYN2Tkw17J1m3WKlhpgmJgYOzNyI+O6y3GduO4PqKBgYFxc8Y/LEv6CNrn46IAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -513,14 +513,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -538,6 +530,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

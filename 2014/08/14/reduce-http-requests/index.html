@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>再议减少HTTP请求 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。">
 <meta name="keywords" content="html5,前端,性能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="再议减少HTTP请求">
-<meta property="og:url" content="//caibing.xyz/2014/08/14/reduce-http-requests/index.html">
+<meta property="og:url" content="//caibing.github.io/2014/08/14/reduce-http-requests/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/reduce-http.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/reduce-http.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再议减少HTTP请求">
 <meta name="twitter:description" content="最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/reduce-http.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/reduce-http.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aQW7DMAxE0dz/0i7QVYHC0gzHLirya2Ukjq2nBUOR+nzkcX2P5PPrx7i7f33PAwMGDBjHMq7l+D2tu2t3Wvq71nODAQPGHMY6aLoB153oXVA23gsDBgwYywklARoGDBgw3gu4tW3tXWKnLAcMGDBgKJtYaTNpFu+UgPvwXhwGDBgHMvIXv3f9Yn8DBgwYhzCueLjNy1pA3zwBBgwYrRnKMYh1fNMLZ7UynBGIYcCA0ZSRBL68lK8X3TYJKwwYMAYw3LCrHyBzJ6e3Hz5upIcBA8axDAWgJHluSqe3M/VPYMCA0ZXhBjg3Naxh7BYmDBgwWjPcapUeWGvpYC3dhAEDRm+GAjDWQ9juut9KoR8GDBitGco21S39/+USGLttGDBgHMuoNSNrk06Od2zeCwMGjNYMpUCmB77awTK9Ibp5FwwYMMYw8qKYe0RMWRojw4UBA0Y7hl7cf6qIrzcM9GWFAQPGHIbeaHSnqB+eqD0BBgwYvRn6VlMvwD2VJtZSRhgwYHRluAmffp0EU73kBwMGjJkM5RFuqyD/7eZfAgYMGK0Z+jEI/dHJMTKj0AYDBowBjKT4lTQ+3UC/2dbCgAGjNaPWMkyOgiXBOkoWYcCAcTjDLYolyaVyZ60wBwMGjAmMWhkuKaW5UX+z6YUBAwYM4ZhFUj5Twq7R34ABA8ZgRl4gq22VpafBgAFjAENvBrjJ3zqYugklDBgwZjLyxkCtbZAsyiv9DRgwYPxHxheP6iLgjH4QogAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOklEQVR42u3ay2rkMBAF0Pz/T3cgzGIC0869JWXolo9WJjSyjgOF6vHxEa/H1/r7+dlfnq3r3Z7tvHlhYGC8LSN5fX7o6wM923P2gTAwMO7GyINsEhATXv7e699gYGBgXAfH5NDXoTMJuBgYGBizgJsnou1xMTAwMFaS2OsDzcpk+Xu35eIYGBhvyJg1Bv7P86/3NzAwMF6e8ShX29rMA+vsPH92wMDAOJqRlNKuk8+83DbbP98TAwPjbEZOag+aJJzJ/sPLIgYGxtGMfJyiPcre8hwGBsY9GSvXtZULYtvUxMDAuA+jLavl41z558gvqfWYBQYGxkGMXQ3L6xDcFviKM2BgYBzNaAPiSrI6azbUhTwMDIzjGG2Cmg9V5IW2dvziH2fAwMA4mjELuLPQnI9rrOyDgYFxKqMtyudJb4tvhz+K/wMGBsbRjCIPDn6fX/KSj1sEXAwMjOMYeYktCbKzEY0N9UIMDIzjGPm1bFY4a0N5G9wxMDDuwGg3Kl4w+lh1gxMDA+NQxmzQoR0jy9ufefFuw7wGBgbGWzFmg19L/dJ4kCJKejEwMI5mzI7bFvH3tjPraREMDIw3ZzzKNUtB2wGOJHn+9oyBgXE0I1/tCFd+6Vy5aGJgYNyHkQ9v5RfElWbk8AwYGBg3YLQDYW1RrG15tgEdAwMDYxZ823ZpO+qBgYGBkRfI8nBZNybzBBgDA+MGjCSJbcfIZiW8JLj/0InFwMA4jjF75a4wvTKItqG/gYGB8eqMT6BwQc+xAhzuAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -544,14 +544,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -569,6 +561,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

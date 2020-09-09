@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>反击爬虫，前端工程师的脑洞可以有多大？ | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="—— 同时发表于imweb.io 1. 前言对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。">
 <meta name="keywords" content="安全,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反击爬虫，前端工程师的脑洞可以有多大？">
-<meta property="og:url" content="//caibing.xyz/2017/07/09/prevent-spiders/index.html">
+<meta property="og:url" content="//caibing.github.io/2017/07/09/prevent-spiders/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="—— 同时发表于imweb.io 1. 前言对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。">
 <meta property="og:locale" content="default">
@@ -324,7 +324,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3ay26EMAwF0P7/T0+3laZkrm1aieSwQpQBThZu/Pj6io/Xj+Pqr+93vl9Pzq/ecsOBgYHxWMZreaw/7v1Tem9JYOtvwMDAOIGRhNGrsJic54F7/YTL6xgYGBjFIJhvFvMFwsDAwMgZ1V9VgzUGBgbGJIld379OXyfnN+fiGBgYD2TkVff/P/+T/gYGBsajGK/iUS2N9cJl+aswMDC2ZvQakJPBiOpYRmH4AwMDY2tGEvKSv+aJ7qRVMNoyYmBgPJZxV+5b/axJW/SXKxgYGAcwJkNgk9BcblViYGAcyei9OP9VdVHWm8LoqzAwMDZlJD9bX1/fWSU1c3EMDIztGHeVvSaDZZO25WUnFgMDYyNGnoj2hiF6S1AN4hgYGCcwkhSxh6wOXlSXr/xoDAyMBzImG7KkEFYNl9XFwsDAOI1RfVy16dhrCURBGQMDY2tGL1EsF8JarYgkZDfXDwMD41GMpEBfTVar5bYbGqIYGBhbM/KyV57E5k/rpcfR/w0MDIytGaPG4XgjmC9HlMRiYGBsx+gNh+XjX8lbkusfAi4GBsYBjPlAWG9gYlKew8DA2JsxGbbIX1ltRpbfi4GBsTVjkoJORjSqpGqyjYGBsR+jGmST7WCvfJYH3MsWJgYGxtaMddk93w7OQ3B104mBgYFRDZG9AJosSlR0w8DAwIhLaXnDIL//w50YGBgHMHojEfnIRXPDl4d4DAyMrRl56lhNX+99Zm+BMDAwHs74BqRc0T8+zalGAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aQXKDMAwFUO5/abruZGK+ZNMp5nnVSQjmsVAlS8cRr/NjfX6bXPnt+s/fHncsDAyMxzLO4aoyersksIsXhIGB8QJGHhbHwTEJmuMdx/t+/RwDAwNjmMAliWASNDEwMDDWMpKNq+EYAwMDY8zoFZa9IjY/pLulFsfAwHggIz91//u/b+lvYGBgPIpxFlfStqwevfWe5NedMTAwtmasTeyqJfGqhigGBsbbGNWRi95wRh64CyUrBgbGpozekVlv/CL5VbXl8CvDxcDA2JRRDbLjBC55xLXjZUe+GQYGxmMZvaA58wp6KWN5WgQDA2MjRu+AvnfrGcyy/yEYGBgPZFQblr0iszdsUUhGMTAwXsOYaTT2EsQ8pF7cEwMD4wWM3gDEzPV5w2DBmAUGBsbDGfkD3XGsv7YJgYGBsSujenCfJ3zVsrYXoC8yXAwMjC0Y1SGJGUY1EBcalhgYGFszmn3O1nhEL3wnv8LAwNibkXydj18kITgfwqjOUWBgYOzNGAfKmfZAkm72yuOvh24YGBhbM/LkbB6Z3LOcOGJgYLyGMTP6kCeCvbL54jkxMDA2ZZzFlYTFmZSxF6YxMDD2ZvSCXX5YX003e68JAwPjDYyZIFs9XFtV+mJgYLyTkQe+mbA482ouQj8GBgbGMCzm2+d3qH6OgYGBkTxEr3ytpo+3B1wMDIx/zEiK2PuaBNU2AAYGxtsYaxO7POHL2wO9O2BgYGzB+AGdJvoIiR4xCQAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -575,14 +575,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -600,6 +592,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

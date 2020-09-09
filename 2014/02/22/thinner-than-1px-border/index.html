@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>像素级细节：移动端1px border的实现 | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="请记住，每个尽责的设计师都是处女座…  这里…没有黑处女座的意思，只是想借题发挥，并由衷的跪倒在强大的“像素眼”之下。">
 <meta name="keywords" content="html5,css3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="像素级细节：移动端1px border的实现">
-<meta property="og:url" content="//caibing.xyz/2014/02/22/thinner-than-1px-border/index.html">
+<meta property="og:url" content="//caibing.github.io/2014/02/22/thinner-than-1px-border/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="请记住，每个尽责的设计师都是处女座…  这里…没有黑处女座的意思，只是想借题发挥，并由衷的跪倒在强大的“像素眼”之下。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/border1px.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/border1px.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="像素级细节：移动端1px border的实现">
 <meta name="twitter:description" content="请记住，每个尽责的设计师都是处女座…  这里…没有黑处女座的意思，只是想借题发挥，并由衷的跪倒在强大的“像素眼”之下。">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/border1px.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/border1px.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3a0W6DMAxGYd7/pdltp41wfgcqxTm5qiYK/qjkxXaOA6/zY/Er/67Pa64+k6cUlwwZMpZl8AeP/3515/HrIMhxbDJkyNiHMQ7i6jPPe2nQPDYZMmTI4A/jG8c0HcuQIUPGTMJNE2haKsuQIUPGTIPspqSceB2v1+IyZMhYkMFT4fc/vzLfkCFDxlKMM1wkOfLW2/g1BVHJkCGjNYMnOI5JEzcvXG8Of8iQIaMpg5egtab/TMk6fvo/v4MMGTJaM8abOZ5e50NPD178SrgyZMhoyki3fbVEWTsKlo4cZMiQ0ZtBvkyS7Ns8tFWVIUNGU0bRja/kW8m0GJYhQ8Y+jDR11lJqen/+LRkyZOzJSLdxfCTJv1VL1jJkyOjHiNNZOPjkB2HJHS7BMmTIaM0gW0NSZPJmWa1s5olYhgwZvRlPtcBqaZq/mvg3kSFDRgsGSX+1NtlRWuQ+N/tcGTJkNGXw4jNNhXyc8EC/UIYMGU0Z5PGk4ExLzVrJKkOGjD0ZPPT0FBYfcJJAb16cDBkyNmA81cSfOX4x1S+UIUPGBoxaEz8dNM605IL/GzJkyGjEOMNVa9yn5W58EFaGDBmtGTNjRR4cGXmmBy+KGBkyZCzLSEOsHc5Ig4tjkCFDxgYMMs7kqTkthmfuL0OGDBk8LaYjhFpTD/lkyJCxPSNtsdVeRzydlCFDxgaMdBhQa5ml7Tw+zpQhQ0ZvRm3fNb+xI4E+VfrKkCFjWcYP9XYZBk0mxHMAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3awXLDIAxF0fz/T7vbzqTB90k4U+CyyrQGc7JQENLrhcf1Nn7/nTz5/synz59mTRgyZMhYlnENR8pIV+awmy9IhgwZBzB4WEyfHOPHAZfsTYYMGTI4iYRREnZlyJAhY1bA7YTpf/S7IUOGjKUYJIklx8Q0oSVJ8uRcXIYMGQsy+Ca+//mR+oYMGTKWYlzh6FyijYuUV2PIkCFjbwYPcJ3LfXL1RtLj8X5kyJBxAmPWtshGyazx24vftAwZMhZn1K69+KZJK0YrrMuQIWNTRpqm8tfzkmTt7TdbkSFDxkaMNHXkQbPTSBG3WciQIWNrRr+1K019eagNDp0yZMg4jFELu7ULtTQ0f5wlQ4aMAxhkuVkpbnpARKUIGTJkbM3op6/pf8mlfxrEZciQsTdjVpLJSwVxGCVIGTJkHMDgl25PNK2me0AnXBkyZGzHIJdcfV6tdQwVMmXIkHEMo99UUVstbcX4Yw8yZMjYmpFee9UOkZ25QTlBhgwZxzB4qK0d+GpXdQgjQ4aMYxjpFkkoJKuRrQfNFjJkyNia0SklpmE3bQ67WV+GDBmbMq5w8ICbzi0mrjJkyDiAwQcJpvzyrtNgke5HhgwZezBIkOUFg846PODKkCHjTEanPWtueZKHfhkyZMjoMGqXbmlzRjxBhgwZRzL6ZQNe4Hww4MqQIWMRRtqYhRogwvBaOyDKkCHjBAaflqap/TX7PwMyZMhYnPEDe4oD8a1eiW0AAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -518,14 +518,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -543,6 +535,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

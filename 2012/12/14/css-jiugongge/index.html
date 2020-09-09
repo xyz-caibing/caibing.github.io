@@ -5,29 +5,29 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>css实现九宫格(一) | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前段时间，我的 leader Henry在群里面分享了一道一淘的面试题。         题目非常的有趣，忙完前阵的工作之后突然记起，也尝试做了一下。  9个元素，每个50*50px，排成九宫格默认是border颜色为blue，hover到格子上变成red（兼容到IE6）">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css实现九宫格(一)">
-<meta property="og:url" content="//caibing.xyz/2012/12/14/css-jiugongge/index.html">
+<meta property="og:url" content="//caibing.github.io/2012/12/14/css-jiugongge/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="前段时间，我的 leader Henry在群里面分享了一道一淘的面试题。         题目非常的有趣，忙完前阵的工作之后突然记起，也尝试做了一下。  9个元素，每个50*50px，排成九宫格默认是border颜色为blue，hover到格子上变成red（兼容到IE6）">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge1.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge2.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge3.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge4.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge5.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge6.jpg">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/jiugongge7.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge1.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge2.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge3.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge4.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge5.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge6.jpg">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/jiugongge7.jpg">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css实现九宫格(一)">
 <meta name="twitter:description" content="前段时间，我的 leader Henry在群里面分享了一道一淘的面试题。         题目非常的有趣，忙完前阵的工作之后突然记起，也尝试做了一下。  9个元素，每个50*50px，排成九宫格默认是border颜色为blue，hover到格子上变成red（兼容到IE6）">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/jiugongge1.jpg">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/jiugongge1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -301,7 +301,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQY7CMAwFUO5/aUaaFRICvu10hqavK4Sgzeviy45zu8XX/fd6/Px4vfpN9ffPv1l8YWBgnJZxf3u9f2Ryn+c7JK8pXxsGBsZ1GNVbT5aevIh8bRgYGBjJcpNwzKMTAwMD44jATQq+3jcYGBgY1SY2aWWT4i+J9QN7cQwMjBMyeoOBv/l8+HwDAwPj6xnztnMSkavaYAwMjL0ZSZHXO3jRa3F7QwIMDIwrMP53YPk+cMuvHgMDYztGL9R6B7+qY4BkO2+UzRgYGKdi9I5ZVMM3LyjLxSsGBsbWjDxM86MSawcPPTYGBsZOjF6w5iOBeQEahTUGBsZlGNXCMd+Gqw4p8+jHwMC4DqN6i7wpjRbRCuWXu4YYGBhbM+bHI3pNaa/dHY0wMTAwTsjIw7Q3dKwOCZJnjeYbGBgYJ2RUC7W1G3DJGODDq8HAwNiaUd0+y9vR/NhEEvrR8QsMDIzLMPISrTf+nG+9vXwFGBgYF2b0Sr15jJZLRgwMjMswjtjoXxXlhU03DAyMTRnVLbNJu9tb7ochBAYGxtaM+VAzH1jOj1wkBSgGBsZOjN42WfVQRfUgRbmIxMDA2JpRjbkjjoWtfRYGBsaujN4Is1fMVb/P21oMDIwrMKrBN9rEj8O30IVjYGBgjB+2NnYxMDAw8pCdjw2qRzrKyY2BgbERIx8GVJc4uX+hYcbAwNiasWowsCqa838dMt/AwMD4LsYPPCiodjUo0IQAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aSXLDMAwEQP//08oDHCkDQEqVyOYpZWth+4Bg4ecTr+NrfX+bXHl9zfVdNywMDIzXMo7Llbwg+Tx5fn7XL2/EwMDYgJFs4vr6asC9vjffGwYGBsbZNVEQDBLB6nsxMDAwqoxqaE6SQgwMDIxJEVsNtT3A47U4BgbGCxl51/3//35kvoGBgfEqxlFck0I3HzCUd4WBgbE0Iw9w1cMWvS329oOBgbE2I3lEUljmRWk1HEclKwYGxjaMyRGKXjiuttVOeRgYGEsz8mNe1SvzEUJeJBc6ghgYGMsxepvOj0pMUsbr8I2BgbEDo5fqTYagT7AxMDDWZlRTxjyKV9PB3vGv8v8QDAyMlzOeGDH2Dlj0gjUGBsYOjLyJP2m95QVzTsLAwNiB0Uvj7io7kzBabrphYGAsxKgOFCdN/F66WTgzgoGBsTSjt5XeELQaiKNDGBgYGNswklQsL3HvHV7+EeIxMDCWZvQOSVS3e1dJXJ7BYmBgLMTIk8LqsLMHyAvdcoKIgYHxcsZ8GDkZElSL59OAi4GBsQHjrnB5V7p5/WOdBlwMDIyFGEdx9Y5NTJpxUVMPAwNjacak6TZpwOXjybwxh4GBsTZj0upKUslJ4tjsGmJgYCzKmAe+fGA5SfuiWhwDA2N7RuHRgxK3+jkGBgZGnqIl48zC1CL/CTAwMDZgJEVsMsichNfREBQDA2NpRl46Ttpz1YMddw0nMDAwXs74AServCpmz7bqAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -539,14 +539,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -564,6 +556,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">

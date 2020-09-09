@@ -5,27 +5,27 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//caibing.xyz">
+  <link rel="dns-prefetch" href="//caibing.github.io">
   <title>作为一个前端，可以如何机智地弄坏一台电脑？ | Litten的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="有人说，前端的界限就在浏览器那儿。 无论你触发了多少bug，最多导致浏览器崩溃，对系统影响不到哪去。这就像二次元各种炫酷的毁灭世界，都不会导致三次元的世界末日。然而，作为一个前端，我发现是有方式打开次元大门的… 这个实验脑洞较大，动机无聊，但某种意义上反映了一些安全问题。想象一下，有天你在家里上网，吃着火锅还唱着歌，点开一个链接，电脑突然就蓝屏了！想想还真有点小激动。">
 <meta name="keywords" content="js,安全,黑科技">
 <meta property="og:type" content="article">
 <meta property="og:title" content="作为一个前端，可以如何机智地弄坏一台电脑？">
-<meta property="og:url" content="//caibing.xyz/2015/07/06/hack-in-localstorage/index.html">
+<meta property="og:url" content="//caibing.github.io/2015/07/06/hack-in-localstorage/index.html">
 <meta property="og:site_name" content="Litten的博客">
 <meta property="og:description" content="有人说，前端的界限就在浏览器那儿。 无论你触发了多少bug，最多导致浏览器崩溃，对系统影响不到哪去。这就像二次元各种炫酷的毁灭世界，都不会导致三次元的世界末日。然而，作为一个前端，我发现是有方式打开次元大门的… 这个实验脑洞较大，动机无聊，但某种意义上反映了一些安全问题。想象一下，有天你在家里上网，吃着火锅还唱着歌，点开一个链接，电脑突然就蓝屏了！想想还真有点小激动。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/localstorage1.png">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/localstorage3.png">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/localstorage2.png">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/localstorage4.png">
-<meta property="og:image" content="//caibing.xyz/assets/blogImg/localstorage5.png">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/localstorage1.png">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/localstorage3.png">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/localstorage2.png">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/localstorage4.png">
+<meta property="og:image" content="//caibing.github.io/assets/blogImg/localstorage5.png">
 <meta property="og:updated_time" content="2020-09-09T02:16:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="作为一个前端，可以如何机智地弄坏一台电脑？">
 <meta name="twitter:description" content="有人说，前端的界限就在浏览器那儿。 无论你触发了多少bug，最多导致浏览器崩溃，对系统影响不到哪去。这就像二次元各种炫酷的毁灭世界，都不会导致三次元的世界末日。然而，作为一个前端，我发现是有方式打开次元大门的… 这个实验脑洞较大，动机无聊，但某种意义上反映了一些安全问题。想象一下，有天你在家里上网，吃着火锅还唱着歌，点开一个链接，电脑突然就蓝屏了！想想还真有点小激动。">
-<meta name="twitter:image" content="//caibing.xyz/assets/blogImg/localstorage1.png">
+<meta name="twitter:image" content="//caibing.github.io/assets/blogImg/localstorage1.png">
   
     <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
   
@@ -339,7 +339,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3ayY7CQAxFUf7/p2EbqQl9n10gletmhRiSOr1we3o88PW8XH/f4df1t3evr+8svmTIkLEtgz+4dlxyUAK7e4oMGTLOYdxFsLvv9I9CAi45mwwZMmR8/s7dQXlCSRJQGTJkyEgZaalJji5DhgwZhLG2QVYLrGnxLEOGjHMYPGj+/vVX5hsyZMjYitEfQJKUrp9K/nMqGTJkjGbwAEdKUPI+b9LF55EhQ8ZoRho6CYCH4P5yhgwZMk5gkFSPpG6k9OWAeOFDhgwZoxl8oNhpxpHYSIYKxe6gDBkyBjH4wzrJYi28FpEyZMjYnJGuRPDGfbpUwb+PtkVkyJAxiNFptKWJY+f+QeopQ4aMYxjkpmmjv5axxgscMmTIGMfg5WU6Yqz1wfhE8s1kQ4YMGaMZqxLEWluttnwmQ4aM0xhxS+sL6R1f13jzqQwZMkYzak2xZXVzKUGUIUOGjFWFaG1U2b+zDBkypjJqyVktfeSDBPJbVAHLkCFjKCMtZdMFr88BNF3jkCFDxjkM8vgaLE0Ti8NRGTJkHMBIG2R8USxt6vHxQ+v/hgwZMjZh1BYm0vWLdBgZ30GGDBmjGbV1CtK45w39dBTaGmbIkCFjW0YnyNb+TuRTvvYhQ4aMcxh8eJkmaqTETRt5wbaIDBkyDmbwwpX8tjYWlSFDhgzeYiPDAHI4codlqaEMGTI2ZPDQmZa7C6asJFjLkCFjNIOXjrVPa6VvZzghQ4aMQYwXBmwi4M5vzM0AAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3ay5ICIRBE0f7/n9ZtGwaamQUaFJeVoTPA6QVNPa5LHo/beP9GGaPZRnNeKwYMGDC2ZSjLu5vTH8f9+9FnZXUYMGCcwBgtqfzNZ0C2aX1vMGDAgKEspmwi2yIMGDBgVKabFTf/+b0BAwaMrRhKECtNJ6TnlGB1YSwOAwaMDRnZsfibz0vqGzBgwNiKkZUhs/B17k5eVoQBA0ZrRrZMJRmnlBOy/cCAAaM3Qz8E9cX00qYS6JbuvDBgwGjKyNom6gGwfiWVeDBgwGjBcNP0ypNw216zwoPxnGDAgNGCoSymlxvdteqHPgwYME5gzDpwK7AsMQcDBowTGG6qPUt7uYd19hqAAQNGb4a7daXxQr8O6m2yX7KGMGDAaMr4/HN2RXO3Up8HBgwYpzGyAqR7pVMOaKN0CgMGjIMZWaItC031hgzpaggDBoxGjHqY6l4ojRS/m+CDAQNGa4Z+TVRaKCqJOfemF9Y3YMCA0YLhHpTZYaoAjBosDBgwWjNWt3Mpqyhh7Zd9woAB42CGknTLSEbqPysPwIABox3jMoe70VmXyOH/woABoynjYY4M5l40pYtgFn/DgAFjQ0b9sKs0WGQFg0oZAwYMGPsyssXc9gv34NYfEAwYMM5huG0N6w7TUigLAwYMGFFyzS2FhnPCgAEDhpluy8Jgt41jwnsDBgwYWzH0xiy9qKAXCdwsIAwYME5jZK0VlcO3nsILi5owYMDYj/EEA/UNy3IHbjkAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -577,14 +577,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -602,6 +594,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
               <li class="article-tag-list-item">
