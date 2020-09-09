@@ -177,6 +177,18 @@
     <lastmod>2020-09-09</lastmod>
   </url>
   <url>
+    <loc>//caibing.github.io/2015/04/28/img-lazy-load/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>//caibing.github.io/2014/03/03/instagram-api-ex/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>//caibing.github.io/2014/09/26/journey-to-yunnan/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
     <loc>//caibing.github.io/2014/08/01/kael-qrcode-info/</loc>
     <lastmod>2020-09-09</lastmod>
   </url>
@@ -217,19 +229,19 @@
     <lastmod>2020-09-09</lastmod>
   </url>
   <url>
-    <loc>//caibing.github.io/2014/09/26/journey-to-yunnan/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
-    <loc>//caibing.github.io/2014/03/03/instagram-api-ex/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
-    <loc>//caibing.github.io/2015/04/28/img-lazy-load/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
     <loc>//caibing.github.io/2015/11/03/nginx-in-fe/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>//caibing.github.io/2013/12/20/no-one-used-pro/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>//caibing.github.io/2013/08/20/oauth-rabbit/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>//caibing.github.io/2017/07/09/prevent-spiders/</loc>
     <lastmod>2020-09-09</lastmod>
   </url>
   <url>
@@ -282,18 +294,6 @@
   </url>
   <url>
     <loc>//caibing.github.io/2015/02/23/yilia-on-mobile/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
-    <loc>//caibing.github.io/2013/12/20/no-one-used-pro/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
-    <loc>//caibing.github.io/2013/08/20/oauth-rabbit/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
-    <loc>//caibing.github.io/2017/07/09/prevent-spiders/</loc>
     <lastmod>2020-09-09</lastmod>
   </url>
 </urlset> 
