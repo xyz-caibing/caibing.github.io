@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Litten的博客</title>
-  <icon>https://www.gravatar.com/avatar/1b1060c5a2544f4ae03788a00f7c2c93</icon>
-  <subtitle>胆小认生，不易相处</subtitle>
+  <title>买了个菜饼</title>
+  <icon>https://www.gravatar.com/avatar/f0a7280f0ab61c9b5701ac3a6fcb0ab9</icon>
+  <subtitle>坚持养成习惯</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="//caibing.github.io/"/>
@@ -10,8 +10,8 @@
   <id>//caibing.github.io/</id>
   
   <author>
-    <name>Litten</name>
-    <email>litten225@qq.com</email>
+    <name>菜饼</name>
+    <email>xyz-caibing@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
