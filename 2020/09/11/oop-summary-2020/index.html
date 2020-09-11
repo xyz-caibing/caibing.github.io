@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//caibing.github.io">
   <title>面向对象的设计 总结 | 买了个菜饼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代码建模就是把业务抽象成事务（类、抽象类）和行为（接口）的过程。   面向对象的设计原则   对接口编程，不要对实现编程   使用对象之间的组合，减少对继承的使用   抽象用于不同的事务，而接口用于事物的行为   结论：代码建模过程就是“面向对象设计过程”的具体实现方式  设计模式的设计原则1234567开闭原则：对扩展开放，对修改关闭依赖倒置：对接口编程，依赖于抽象而不依赖于具体接口隔离：使用">
+  <meta name="description" content="代码建模就是把业务抽象成事务（类、抽象类）和行为（接口）的过程。   面向对象的设计原则   对接口编程，不要对实现编程   使用对象之间的组合，减少对继承的使用   抽象用于不同的事务，而接口用于事物的行为   结论：代码建模过程就是“面向对象设计过程”的具体实现方式  设计模式的设计原则123456开闭原则：对扩展开放，对修改关闭依赖倒置：对接口编程，依赖于抽象而不依赖于具体接口隔离：使用多">
 <meta name="keywords" content="目标,summary">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象的设计 总结">
 <meta property="og:url" content="//caibing.github.io/2020/09/11/oop-summary-2020/index.html">
 <meta property="og:site_name" content="买了个菜饼">
-<meta property="og:description" content="代码建模就是把业务抽象成事务（类、抽象类）和行为（接口）的过程。   面向对象的设计原则   对接口编程，不要对实现编程   使用对象之间的组合，减少对继承的使用   抽象用于不同的事务，而接口用于事物的行为   结论：代码建模过程就是“面向对象设计过程”的具体实现方式  设计模式的设计原则1234567开闭原则：对扩展开放，对修改关闭依赖倒置：对接口编程，依赖于抽象而不依赖于具体接口隔离：使用">
+<meta property="og:description" content="代码建模就是把业务抽象成事务（类、抽象类）和行为（接口）的过程。   面向对象的设计原则   对接口编程，不要对实现编程   使用对象之间的组合，减少对继承的使用   抽象用于不同的事务，而接口用于事物的行为   结论：代码建模过程就是“面向对象设计过程”的具体实现方式  设计模式的设计原则123456开闭原则：对扩展开放，对修改关闭依赖倒置：对接口编程，依赖于抽象而不依赖于具体接口隔离：使用多">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-09-11T08:41:54.000Z">
+<meta property="og:updated_time" content="2020-09-11T08:48:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象的设计 总结">
-<meta name="twitter:description" content="代码建模就是把业务抽象成事务（类、抽象类）和行为（接口）的过程。   面向对象的设计原则   对接口编程，不要对实现编程   使用对象之间的组合，减少对继承的使用   抽象用于不同的事务，而接口用于事物的行为   结论：代码建模过程就是“面向对象设计过程”的具体实现方式  设计模式的设计原则1234567开闭原则：对扩展开放，对修改关闭依赖倒置：对接口编程，依赖于抽象而不依赖于具体接口隔离：使用">
+<meta name="twitter:description" content="代码建模就是把业务抽象成事务（类、抽象类）和行为（接口）的过程。   面向对象的设计原则   对接口编程，不要对实现编程   使用对象之间的组合，减少对继承的使用   抽象用于不同的事务，而接口用于事物的行为   结论：代码建模过程就是“面向对象设计过程”的具体实现方式  设计模式的设计原则123456开闭原则：对扩展开放，对修改关闭依赖倒置：对接口编程，依赖于抽象而不依赖于具体接口隔离：使用多">
   
     <link rel="alternative" href="/atom.xml" title="买了个菜饼" type="application/atom+xml">
   
@@ -58,7 +58,7 @@ var _hmt = _hmt || [];
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/blogImg/litten.png" class="js-avatar">
+			<img src="/assets/blogImg/caibing.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">菜饼</a></h1>
@@ -114,7 +114,7 @@ var _hmt = _hmt || [];
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/blogImg/litten.png" class="js-avatar">
+				<img src="/assets/blogImg/caibing.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">菜饼</h1>
@@ -201,7 +201,7 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>结论：代码建模过程就是“面向对象设计过程”的具体实现方式</p>
 </blockquote>
-<h6 id="设计模式的设计原则"><a href="#设计模式的设计原则" class="headerlink" title="设计模式的设计原则"></a>设计模式的设计原则</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">开闭原则：对扩展开放，对修改关闭</span><br><span class="line">依赖倒置：对接口编程，依赖于抽象而不依赖于具体</span><br><span class="line">接口隔离：使用多个接口，而不是对一个接口编程，去依赖降低耦合</span><br><span class="line">最少知道：减少内部依赖，尽可能的独立</span><br><span class="line">合成复用：多个独立的实体合成聚合，而不是使用继承</span><br><span class="line">里氏代换：超类出现的地方，派生类都可以出现</span><br></pre></td></tr></table></figure>
+<h6 id="设计模式的设计原则"><a href="#设计模式的设计原则" class="headerlink" title="设计模式的设计原则"></a>设计模式的设计原则</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">开闭原则：对扩展开放，对修改关闭</span><br><span class="line">依赖倒置：对接口编程，依赖于抽象而不依赖于具体</span><br><span class="line">接口隔离：使用多个接口，而不是对一个接口编程，去依赖降低耦合</span><br><span class="line">最少知道：减少内部依赖，尽可能的独立</span><br><span class="line">合成复用：多个独立的实体合成聚合，而不是使用继承</span><br><span class="line">里氏代换：超类出现的地方，派生类都可以出现</span><br></pre></td></tr></table></figure>
 
       
 
