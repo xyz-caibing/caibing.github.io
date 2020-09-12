@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//caibing.github.io/"/>
-  <updated>2020-09-11T08:55:39.000Z</updated>
+  <updated>2020-09-12T00:52:41.092Z</updated>
   <id>//caibing.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lt takes a village</title>
+    <link href="//caibing.github.io/2020/09/12/village-2020/"/>
+    <id>//caibing.github.io/2020/09/12/village-2020/</id>
+    <published>2020-09-12T00:51:00.000Z</published>
+    <updated>2020-09-12T00:52:41.092Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在今天的公司文化里，非常强调团队协作，我们要面对的工作非常复杂，几乎没有什么人能完全独当一面。同样，回到家里，养孩子也是个复杂的系统工程，聪明的女性，要学会建立一个强有力的支持系统。通常，妈妈们，不管是职场妈妈还是全职妈妈，会理所当然的认为，教育孩子的主要的职责是自己的。但即使你觉得自己负主要职责，妈妈不是，也不应该是唯一的负责人。<br>就像在公司里，想要做成事，一定要一个团队来一起做一样。我们在家里教育孩子，也需要利用一个团队。</p><h6 id="谁会是你的队友？"><a href="#谁会是你的队友？" class="headerlink" title="谁会是你的队友？"></a>谁会是你的队友？</h6><ul><li>一类是孩子的爸爸和亲戚、长辈；</li><li>第二类是友邻和朋友</li></ul><p>待续…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在今天的公司文化里，非常强调团队协作，我们要面对的工作非常复杂，几乎没有什么人能完全独当一面。同样，回到家里，养孩子也是个复杂的系统工程，聪
+      
+    
+    </summary>
+    
+    
+      <category term="培养面向未来的孩子" scheme="//caibing.github.io/tags/%E5%9F%B9%E5%85%BB%E9%9D%A2%E5%90%91%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A9%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象的设计 总结</title>
