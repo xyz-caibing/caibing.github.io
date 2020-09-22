@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//caibing.github.io">
-  <title>Hello World | 买了个菜饼</title>
+  <title>Docker 命令集 | 买了个菜饼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Winiex的推荐和帮助下，这个octopress博客终于搭建起来了。 折腾了两天多，在github page上看到自己的博客加载下来时，突然有种错综复杂的恍惚感。是的，它不是qq空间，不是新浪博客，不是豆瓣小站，也不是贴吧。它更像是属于自己的一块小小的领地，因而我满足于这种归属感。我愿在上面安静劳作。 一个农民，通过自身努力终于分到了一块地，不再需要在地主的土地上创造流量价值时，于是翻身作主的">
-<meta name="keywords" content="杂谈,octopress">
+  <meta name="description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    *注意 这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 doc">
+<meta name="keywords" content="docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="//caibing.github.io/2020/09/09/hello-world/index.html">
+<meta property="og:title" content="Docker 命令集">
+<meta property="og:url" content="//caibing.github.io/2020/09/18/docker-command/index.html">
 <meta property="og:site_name" content="买了个菜饼">
-<meta property="og:description" content="在Winiex的推荐和帮助下，这个octopress博客终于搭建起来了。 折腾了两天多，在github page上看到自己的博客加载下来时，突然有种错综复杂的恍惚感。是的，它不是qq空间，不是新浪博客，不是豆瓣小站，也不是贴吧。它更像是属于自己的一块小小的领地，因而我满足于这种归属感。我愿在上面安静劳作。 一个农民，通过自身努力终于分到了一块地，不再需要在地主的土地上创造流量价值时，于是翻身作主的">
+<meta property="og:description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    *注意 这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 doc">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-09-14T06:42:58.298Z">
+<meta property="og:updated_time" content="2020-09-22T08:30:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="在Winiex的推荐和帮助下，这个octopress博客终于搭建起来了。 折腾了两天多，在github page上看到自己的博客加载下来时，突然有种错综复杂的恍惚感。是的，它不是qq空间，不是新浪博客，不是豆瓣小站，也不是贴吧。它更像是属于自己的一块小小的领地，因而我满足于这种归属感。我愿在上面安静劳作。 一个农民，通过自身努力终于分到了一块地，不再需要在地主的土地上创造流量价值时，于是翻身作主的">
+<meta name="twitter:title" content="Docker 命令集">
+<meta name="twitter:description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    *注意 这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 doc">
   
     <link rel="alternative" href="/atom.xml" title="买了个菜饼" type="application/atom+xml">
   
@@ -157,30 +157,61 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-docker-command" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Docker 命令集
     </h1>
   
 
         
-        <a href="/2020/09/09/hello-world/" class="archive-article-date">
-  	<time datetime="2020-09-09T12:39:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-09</time>
+        <a href="/2020/09/18/docker-command/" class="archive-article-date">
+  	<time datetime="2020-09-18T08:23:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在Winiex的推荐和帮助下，这个octopress博客终于搭建起来了。</p>
-<p>折腾了两天多，在github page上看到自己的博客加载下来时，突然有种错综复杂的恍惚感。是的，它不是qq空间，不是新浪博客，不是豆瓣小站，也不是贴吧。它更像是属于自己的一块小小的领地，因而我满足于这种归属感。我愿在上面安静劳作。</p>
-<p>一个农民，通过自身努力终于分到了一块地，不再需要在地主的土地上创造流量价值时，于是翻身作主的他可以宣告说：Hello World。当然这个农民确切来说是个码农。</p>
-<p>感谢Zespia提供的slash主题。我很喜欢这种色调。</p>
+        <h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><ul>
+<li>从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>*注意 这里的仓库名是两段式名称，即&lt;用户名&gt;/&lt;软件名&gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。</p>
+</blockquote>
+<h3 id="列出镜像"><a href="#列出镜像" class="headerlink" title="列出镜像"></a>列出镜像</h3><ul>
+<li><p>可以通过 docker images [ls] 列出已经下载的所有顶层镜像。其命令格式为：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker images [选项] [仓库名[:标签]]</span><br><span class="line"></span><br><span class="line">选项：</span><br><span class="line"><span class="code">    -a, --all           希望显示包括中间层镜像在内的所有镜像的话，需要加 -a 参数。</span></span><br><span class="line"><span class="code">        --digests       摘要</span></span><br><span class="line"><span class="code">    -f, --filter value  根据提供的条件过滤输出</span></span><br><span class="line"><span class="bullet">                        - </span>dangling =(true|false)     显示*[虚悬镜像]:详细解释在下方</span><br><span class="line"><span class="bullet">                        - </span>label =&lt;key&gt; or label=&lt;key&gt;=&lt;value&gt;    如果镜像构建时，定义了label，可以通过label来过滤</span><br><span class="line"><span class="bullet">                        - </span>before =(&lt;image-name&gt;[:tag]|&lt;image-id&gt;|&lt;image@digest&gt;)     希望看到某个镜像之后建立的镜像</span><br><span class="line"><span class="bullet">                        - </span>since =(&lt;image-name&gt;[:tag]|&lt;image-id&gt;|&lt;image@digest&gt;)      希望查看某个位置之前的镜像</span><br><span class="line"><span class="code">        --format string 以特定格式显示</span></span><br><span class="line"><span class="code">        --help</span></span><br><span class="line"><span class="code">        --no-trunc      不要截断输出</span></span><br><span class="line"><span class="code">    -q, --quiet         仅显示IMAGE ID，‘注意可以和-f搭配组合以完成很强大的功能，看到过滤器后，可以多注意一下它们的用法’</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>镜像体积：显示的是镜像下载到本地后，展开后的各层所占空间的总和。需注意镜像体积总和并非是所有镜像实际硬盘消耗，因为docker镜像是多层存储结构，并可以继承、复用相同的基础镜像。可以用下面的命令</p>
+<blockquote>
+<p>docker images ls [仓库名[:标签]]</p>
+</blockquote>
+</li>
+<li>虚悬镜像（dangling image）：镜像原本是有镜像名和标签的，如ubuntu:16.04，随着官方镜像维护，发布新版本后，重新docker pull ubuntu:16.04时，这个镜像名被转移到了新下载的镜像身上，而旧的镜像上这个名称则被取消，从而成为了<none>.这类无标签镜像也被称为 虚悬镜像。可以用下面的命令<blockquote>
+<p>docker images ls -f dangling=true</p>
+</blockquote>
+</none></li>
+<li>一般来说虚悬镜像已经失去存在必要，可以删除，可以用下面的命令<blockquote>
+<p>docker images prune</p>
+</blockquote>
+</li>
+<li>中间层镜像：为了加速镜像构建、重复利用资源，docker会利用中间层镜像。所以在使用一段时间后，可能会看到一些依赖的中间层镜像。可以用下面的命令<blockquote>
+<p>docker images ls -a</p>
+</blockquote>
+</li>
+<li>列出部分镜像<blockquote>
+<p>docker images ls [仓库名[:标签]]</p>
+</blockquote>
+</li>
+<li>以特定格式显示，我们可能只是对表格的结构不满意，希望自己组织列；或者不希望有标题，这样方便其它程序解析结果等，这就用到了 Go 的模板语法。<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker images <span class="keyword">ls</span> <span class="params">--format</span> <span class="string">"&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;"</span></span><br><span class="line"></span><br><span class="line">docker images <span class="keyword">ls</span> <span class="params">--format</span> <span class="string">"table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Repository&#125;&#125;\t&#123;&#123;.Tag&#125;&#125;"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
 
@@ -188,22 +219,13 @@ var _hmt = _hmt || [];
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">octopress</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
         		</li>
       		
 		</ul>
@@ -259,7 +281,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACH0lEQVR42u3aS3KDMBAFQN//0s4JcN4b4VSQmpXLwUHNYmp+r1d8vS+u5M6re64+X/3qhgsDA+OxjPfH6+oBV58/Hzd/Vn42DAyMcxgrYXGdl/znX86MgYGBsXxPckQMDAyMexmzgJsnghgYGBizIvauhl1SrH6xFsfAwHggIz/E33/+ynwDAwPjUYx3eX1OzvJEMC93o1NhYGBszcgD3Gy02Sags/NgYGCcw2iDY1t85mXtcFEMAwNja0bSdp81wmbheLaWgYGBsTcjD5efebOG/ixYv9r4jYGB8VjGSmt+ltjlRxxui2BgYGzNSFpjbVPsj9gYGBjHMPJEMC8vV9LB4lViYGAcw8iP3pa7yXhgpUjGwMA4gZE3ttqA276gNm19zfpzGBgYj2Ik5ehdaxP5q2lfAQYGxgmM2dJD25KbNe+GOyMYGBibMtohwWx4sLLA8ZVxJgYGxr9nrBxr5ejJCGGpFsfAwNiIsfKwnJoH3Ha0iYGBcQ5jKaOMV8RyQBt8MTAwzmHctf610pjLh5qXeS4GBsYBjPZh7dWud+RFLwYGxq6MWdM/X7xo70y+L3wYGBhbMGbBri1T84A+S0wxMDBOYORBNofVc4k4EGNgYJzMaANfG17zb4ZlMAYGBka5HjFLHJfGpRgYGBhlOyz5a96ei8pgDAyMAxizYUD+CtpWXd3+w8DA2JqR/yxpvbVttXw8ecNQEwMD43mMH2yAGQYpWGjvAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3aQZKDMAwF0dz/0swBUjj9JZgqy82KSojtx0KxJH8++Lq+rvW36fPfn3/euGTIkLEtg0yffnu3rPWTd/fk1ciQIeMExl0EW9+vAyVZ9HocsjYZMmTIIEvvB1w+rwwZMmR0GDzHXM8iQ4YMGZ0klkxMFlRLgx/LxWXIkLEhg1fd///+lf6GDBkytmJc4dXnvbIqGTJkjGbwaTptS96Y7KxHhgwZUxm89bheFi+u8VcTHBSTIUPGaEa69H7qS45Z8JJfUDuUIUPGtoxOsb7W2gxakjwBliFDxgGMp3oLnWDagsmQIeMARqcoRkbgG1Ae9GXIkHEag6estRJberwsDsoyZMg4gEEGTZNeHgl50huU22TIkDGIwQMlCYv8ABkP30FzVIYMGUMZnek7YTQ9WvHjExkyZIxm8DIZb3/WjnnxRBf9e8iQIWMcYz003wimI3Taoj/+PWTIkDGIwUtjaTOSv6B083cbamXIkDGUwRda28Clm78HWpsyZMgYyuCJZRqg00NmrTKcDBkyDmBwQD9o8vQ1+K0MGTKOYZASPw+avLXJWxG3MBkyZAxlXOGVpqbp4opUGTJkjGbwK21zpqG8dvAihsmQIWNbRu0gRS3trI0jQ4YMGU9t+3ji2tn2oVxchgwZMpZTpk+S2VHIliFDhozSsQm+4eMbylf+N2TIkLEJgywuPUKRHrNoBWsZMmSMZvDU8YGBcOmNzChDhowDGH+snfoIEBGAOgAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,15 +295,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/09/10/my-target-2020/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2020年的目标
-        
-      </div>
-    </a>
   
+    <a href="/2020/09/12/village-2020/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lt takes a village</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -309,7 +327,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="hello-world" ></div> 
+  <div id="SOHUCS" sid="docker-command" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cysX3aGWt"; 

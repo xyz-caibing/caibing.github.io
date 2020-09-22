@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//caibing.github.io/2020/09/18/docker-command/</loc>
+    
+    <lastmod>2020-09-22T08:30:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//caibing.github.io/2020/09/09/hello-world/</loc>
     
     <lastmod>2020-09-14T06:42:58.298Z</lastmod>
@@ -79,14 +86,14 @@
   </url>
   
   <url>
-    <loc>//caibing.github.io/assets/demo/mediator/demo.html</loc>
+    <loc>//caibing.github.io/assets/demo/gift/index.html</loc>
     
     <lastmod>2020-09-09T02:16:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>//caibing.github.io/assets/demo/gift/index.html</loc>
+    <loc>//caibing.github.io/assets/demo/mediator/demo.html</loc>
     
     <lastmod>2020-09-09T02:16:20.000Z</lastmod>
     
