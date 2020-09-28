@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//caibing.github.io">
   <title>Docker 命令集 | 买了个菜饼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    *注意 这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 doc">
+  <meta name="description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    注意：这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 dock">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 命令集">
 <meta property="og:url" content="//caibing.github.io/2020/09/18/docker-command/index.html">
 <meta property="og:site_name" content="买了个菜饼">
-<meta property="og:description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    *注意 这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 doc">
+<meta property="og:description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    注意：这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 dock">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-09-22T08:48:45.096Z">
+<meta property="og:updated_time" content="2020-09-28T07:50:01.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 命令集">
-<meta name="twitter:description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    *注意 这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 doc">
+<meta name="twitter:description" content="获取镜像 从Docker镜像仓库获取镜像的命令是docker pull。其命令格式为：12docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]    注意：这里的仓库名是两段式名称，即&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。  列出镜像 可以通过 dock">
   
     <link rel="alternative" href="/atom.xml" title="买了个菜饼" type="application/atom+xml">
   
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <blockquote>
-<p>*注意 这里的仓库名是两段式名称，即&lt;用户名&gt;/&lt;软件名&gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。</p>
+<p>注意：这里的仓库名是两段式名称，即&lt;用户名&gt;/&lt;软件名&gt;。对于Docker Hub，如果不给出用户名，则默认为library，也就是官方镜像。</p>
 </blockquote>
 <h3 id="列出镜像"><a href="#列出镜像" class="headerlink" title="列出镜像"></a>列出镜像</h3><ul>
 <li><p>可以通过 docker images [ls] 列出已经下载的所有顶层镜像。其命令格式为：</p>
@@ -201,13 +201,29 @@ var _hmt = _hmt || [];
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker images ls -a</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>列出部分镜像</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker images <span class="keyword">ls</span> [仓库名[:标签]]</span><br><span class="line"></span><br><span class="line">docker images <span class="keyword">ls</span> -f since=仓库名:标签</span><br><span class="line"></span><br><span class="line">docker images <span class="keyword">ls</span> -f <span class="keyword">label</span>=com.example.<span class="keyword">version</span>=0.1</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker images <span class="keyword">ls</span> [仓库名[:标签]]</span><br><span class="line"></span><br><span class="line">docker images <span class="keyword">ls</span> -f since=仓库名:标签</span><br><span class="line"></span><br><span class="line">docker images <span class="keyword">ls</span> -f label=com.example.<span class="keyword">version</span>=0.1.<span class="string">..</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>以特定格式显示，我们可能只是对表格的结构不满意，希望自己组织列；或者不希望有标题，这样方便其它程序解析结果等，这就用到了 Go 的模板语法。</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker images <span class="keyword">ls</span> <span class="params">--format</span> <span class="string">"&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;"</span></span><br><span class="line"></span><br><span class="line">docker images <span class="keyword">ls</span> <span class="params">--format</span> <span class="string">"table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Repository&#125;&#125;\t&#123;&#123;.Tag&#125;&#125;"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-
+<h3 id="删除本地镜像"><a href="#删除本地镜像" class="headerlink" title="删除本地镜像"></a>删除本地镜像</h3><ul>
+<li>如果要删除本地镜像，可以使用docker images rm 命令，其格式为：<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images rm [选项] <span class="xml"><span class="tag">&lt;<span class="name">镜像1</span>&gt;</span></span> [<span class="xml"><span class="tag">&lt;<span class="name">镜像2</span>&gt;</span></span> ...]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>注意：其中，&lt;镜像&gt; 可以是 镜像短ID、镜像长ID、镜像名 或者 镜像摘要。镜像的唯一标识是镜像ID和镜像摘要</p>
+<ul>
+<li>用 docker images ls 命令来配合 docker image ls -q ，比如我们需要删除所有仓库名为redis的镜像 或 删除所有在mongo:3.2之前的镜像：<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker images rm $(docker images <span class="keyword">ls</span> -q redis)</span><br><span class="line"></span><br><span class="line">docker images rm $(docker iamges <span class="keyword">ls</span> -q -f before=mongo:<span class="number">3.2</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>充分利用你的想象力和 Linux 命令行的强大，你可以完成很多非常赞的功能。</p>
+</blockquote>
+<h3 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h3><p>… 敬请期待 …</p>
+<h3 id="理解镜像的构成"><a href="#理解镜像的构成" class="headerlink" title="理解镜像的构成"></a>理解镜像的构成</h3><p>… 敬请期待 …</p>
+<h3 id="使用Dockerfile定制镜像"><a href="#使用Dockerfile定制镜像" class="headerlink" title="使用Dockerfile定制镜像"></a>使用Dockerfile定制镜像</h3><h3 id="镜像构建工作原理"><a href="#镜像构建工作原理" class="headerlink" title="镜像构建工作原理"></a>镜像构建工作原理</h3>
       
 
       
@@ -289,6 +305,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/09/27/My-PC-2020/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          大姐小孩要上网课，请我帮组装一台PC
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/12/village-2020/" id="article-nav-older" class="article-nav-link-wrap">
@@ -421,7 +446,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">培养面向未来的孩子</a>
+                <a href="javascript:void(0)" class="js-tag color3">PC</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,6 +475,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">summary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">培养面向未来的孩子</a>
               </li>
             
             <div class="clearfix"></div>
